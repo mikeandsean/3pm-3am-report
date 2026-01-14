@@ -231,7 +231,7 @@
             padding: 28px 32px;
             margin: 40px 0;
             border-radius: 4px;
-            font-size: 15px;
+            font-size: 16px;
         }
         
         .method-box h5 {
@@ -318,25 +318,6 @@
             background: #999;
         }
         
-        /* Stacked comparison */
-        .comparison-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-            margin: 32px 0;
-        }
-        
-        .comparison-col h5 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 16px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid var(--rule);
-        }
-        
         /* Inline Stats */
         .inline-stat {
             font-family: 'JetBrains Mono', monospace;
@@ -419,6 +400,25 @@
             color: var(--muted);
         }
         
+        /* Problem box - new style for the data conflict */
+        .problem-box {
+            background: #fff5f5;
+            border: 1px solid #e8c4c4;
+            padding: 28px 32px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        
+        .problem-box h5 {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        
         /* Portrait box */
         .portrait-box {
             background: #f5f5f3;
@@ -446,19 +446,17 @@
             margin-bottom: 8px;
         }
         
-        /* Two column layout */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin: 32px 0;
+        /* Comparison table for data sources */
+        .data-conflict-table {
+            background: white;
+            border: 1px solid var(--rule);
+        }
+        
+        .data-conflict-table th {
+            background: #f5f5f3;
         }
         
         @media (max-width: 600px) {
-            .two-col, .comparison-grid {
-                grid-template-columns: 1fr;
-            }
-            
             h1 {
                 font-size: 36px;
             }
@@ -479,425 +477,80 @@
         <header>
             <div class="org-name">Center for Teen Flourishing</div>
             <h1>The 3pm–3am Report</h1>
-            <p class="subtitle">How American teenagers actually spend their discretionary hours—and what we still don't know</p>
+            <p class="subtitle">What we know, what we don't, and what we need to find out about teenagers' discretionary hours</p>
             <p class="meta">January 2026 · Research Synthesis</p>
         </header>
         
         <main>
-            <p class="lead">Every day, between 3pm and 3am, American teenagers make thousands of small decisions about how to spend their time. These twelve hours—after school ends and before the next day begins—represent the window of greatest autonomy in adolescent life. What happens in this window matters enormously for development, wellbeing, and flourishing.</p>
+            <p class="lead">The honest starting point: we don't know as much as we think we do about how teenagers spend the hours between school and sleep. The data is messy. The sources contradict each other. The numbers that get the most attention may be the least important.</p>
             
-            <p>Yet a significant share of American teenagers are not flourishing in these hours. They are <em>languishing</em>—not clinically depressed, but not thriving either. A suburban Boston-area teacher recently described his median student this way:</p>
+            <p>But we know enough to be worried—and enough to act. This report attempts to be honest about both the uncertainty and the directional truth buried within it.</p>
             
-            <div class="portrait-box">
-                <h5>Portrait of the Languishing Teen</h5>
-                <ul>
-                    <li>Heavy screen time after school, over the weekend, and during the summer</li>
-                    <li>Little time outdoors, reading books, walking, engaged in fitness, working or volunteering</li>
-                    <li>Apathy; maybe low-grade anxiety or depression (unclear if clinical)</li>
-                    <li>Going through the motions, little direction or ambition</li>
-                    <li>No clear out-of-school "passions"</li>
-                    <li>Hasn't found "their people"</li>
-                </ul>
+            
+            <!-- SECTION I: THE DATA PROBLEM -->
+            <h2>I. The Data Problem</h2>
+            
+            <p>How much time do teenagers spend on screens? It depends who you ask.</p>
+            
+            <div class="problem-box">
+                <h5>Three answers to the same question</h5>
+                <table class="data-conflict-table">
+                    <thead>
+                        <tr>
+                            <th>Source</th>
+                            <th>Methodology</th>
+                            <th class="numeric">Answer</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>ATUS</strong> (BLS, 2024)</td>
+                            <td>Time diary: account for every minute of yesterday</td>
+                            <td class="numeric">1h 19m</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gallup</strong> (2023)</td>
+                            <td>Survey: "How much time on social media?"</td>
+                            <td class="numeric">4.8 hrs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Common Sense Media</strong> (2021)</td>
+                            <td>Survey: estimate total screen entertainment</td>
+                            <td class="numeric">8.4 hrs</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 16px; margin-bottom: 0; font-size: 15px;">These numbers differ by a factor of six. They cannot all be right. Yet each is cited authoritatively in policy debates.</p>
             </div>
             
-            <p>This portrait—recognizable to teachers, parents, and teenagers themselves—sits at the center of a growing concern. As Yuval Levin wrote in a recent essay, "the challenges to America's social order now seem less like exorbitant human desires driving people's lives out of control and more like an absence of energy and drive leaving people languishing and enervated."<sup>1</sup></p>
+            <p>The American Time Use Survey (ATUS), conducted by the Bureau of Labor Statistics, is the gold standard for time-use research. It asks people to walk through their previous day minute by minute, recording what they were <em>primarily</em> doing at each moment. This methodology undercounts multitasking—if you're scrolling your phone while watching TV, only one gets recorded.</p>
             
-            <p>This report synthesizes what we actually know about how teenagers spend the 3pm–3am hours—and names what we don't. Our aim is not to document harm, but to understand the preconditions for flourishing.</p>
+            <p>Surveys like Gallup's ask teens to estimate their total time on social media. This methodology likely overcounts, because attention feels like time, and background scrolling gets lumped with focused use.</p>
             
-            <!-- SECTION I: THE 24-HOUR DAY -->
-            <h2>I. The Complete Picture: A Teenager's Day</h2>
-            
-            <p>The American Time Use Survey (ATUS) is the gold standard for understanding how people spend their time. Conducted continuously since 2003 by the Bureau of Labor Statistics, it asks roughly 7,700 Americans each year to account for every minute of a single day. Unlike surveys that ask people to estimate their weekly habits, ATUS captures actual behavior through detailed time diaries.</p>
-            
-            <p>Here, for the first time in a synthesis designed for general audiences, is how Americans aged 15–19 spend a typical day:<sup>2</sup></p>
-            
-            <div class="chart-container">
-                <div class="chart-title">How 15–19 Year Olds Spend 24 Hours (2024)</div>
-                
-                <div class="bar-chart">
-                    <div class="bar-row">
-                        <span class="bar-label">Sleep & personal care</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 88.8%"></div>
-                        </div>
-                        <span class="bar-value">10h 40m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Leisure & sports</span>
-                        <div class="bar-container">
-                            <div class="bar primary" style="width: 44.6%"></div>
-                        </div>
-                        <span class="bar-value">5h 22m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Education</span>
-                        <div class="bar-container">
-                            <div class="bar secondary" style="width: 26.6%"></div>
-                        </div>
-                        <span class="bar-value">3h 12m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Eating & drinking</span>
-                        <div class="bar-container">
-                            <div class="bar tertiary" style="width: 10.2%"></div>
-                        </div>
-                        <span class="bar-value">1h 14m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Work</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 10.1%"></div>
-                        </div>
-                        <span class="bar-value">1h 13m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Household activities</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 7.9%"></div>
-                        </div>
-                        <span class="bar-value">57m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">All other</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 11.0%"></div>
-                        </div>
-                        <span class="bar-value">1h 22m</span>
-                    </div>
-                </div>
-                <p class="chart-source">Source: BLS American Time Use Survey, Table 3, 2024 annual averages</p>
-            </div>
-            
-            <p>The dominant category after sleep is <strong>leisure and sports</strong>: 5 hours and 22 minutes per day on average. This is where the 3pm–3am window lives—and where our analysis must focus.</p>
-            
-            <h3>Inside the leisure hours</h3>
-            
-            <p>ATUS breaks down those 5+ hours of leisure into component activities. The picture that emerges may surprise those who assume teenagers spend all their free time on social media:</p>
-            
-            <div class="chart-container">
-                <div class="chart-title">Teen Leisure Breakdown: 15–19 Year Olds (2024)</div>
-                
-                <div class="bar-chart">
-                    <div class="bar-row">
-                        <span class="bar-label">Watching TV</span>
-                        <div class="bar-container">
-                            <div class="bar primary" style="width: 61.6%"></div>
-                        </div>
-                        <span class="bar-value">2h 01m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Games & computer</span>
-                        <div class="bar-container">
-                            <div class="bar secondary" style="width: 40.1%"></div>
-                        </div>
-                        <span class="bar-value">1h 19m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Sports & exercise</span>
-                        <div class="bar-container">
-                            <div class="bar tertiary" style="width: 19.6%"></div>
-                        </div>
-                        <span class="bar-value">38m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Socializing</span>
-                        <div class="bar-container">
-                            <div class="bar tertiary" style="width: 18.1%"></div>
-                        </div>
-                        <span class="bar-value">35m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Other leisure + travel</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 15.0%"></div>
-                        </div>
-                        <span class="bar-value">29m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Relaxing/thinking</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 5.2%"></div>
-                        </div>
-                        <span class="bar-value">10m</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Reading</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 4.6%"></div>
-                        </div>
-                        <span class="bar-value">9m</span>
-                    </div>
-                </div>
-                <p class="chart-source">Source: BLS American Time Use Survey, Table 11A, 2024 annual averages</p>
-            </div>
+            <p>Neither is "wrong." But the gap between them is so vast that the headline number—"teens spend X hours on screens"—is essentially meaningless for policy purposes. The truth is probably somewhere between, but we don't know where.</p>
             
             <div class="key-finding">
-                <div class="key-finding-label">Key Finding</div>
-                <p>Television watching—at 2 hours per day—remains the largest single leisure activity for teenagers, larger than gaming, social media, or any other category ATUS measures. "Screen time" is not synonymous with "phone time."</p>
+                <div class="key-finding-label">The Real Problem</div>
+                <p>The obsession with screen time hours may itself be a distraction. The more important question is not how many hours teenagers spend on screens, but <em>what screens are displacing</em>—and what the cost of that displacement is.</p>
             </div>
             
-            <h3>The gender gap in leisure</h3>
             
-            <p>One of the starkest findings in the ATUS data is a substantial gender difference: teenage boys have <span class="inline-stat">1 hour 24 minutes</span> more leisure time per day than teenage girls.</p>
+            <!-- SECTION II: WHAT WE KNOW DIRECTIONALLY -->
+            <h2>II. What We Know Directionally</h2>
             
-            <div class="stat-row">
-                <div class="stat">
-                    <div class="value">6h 04m</div>
-                    <div class="desc">Boys' daily leisure</div>
-                </div>
-                <div class="stat">
-                    <div class="value">4h 40m</div>
-                    <div class="desc">Girls' daily leisure</div>
-                </div>
-                <div class="stat">
-                    <div class="value">+1h 24m</div>
-                    <div class="desc">Gap</div>
-                </div>
-            </div>
+            <p>Even with messy data, certain trends are clear enough to trust. Multiple sources, using different methodologies, point in the same direction. Something has changed in how teenagers spend the 3pm–3am hours.</p>
             
-            <p>Where does girls' time go instead? Primarily to personal care (40 additional minutes) and, marginally, to education and household activities. This gap has implications for any intervention designed around "free time"—girls simply have less of it.</p>
+            <h3>Time with friends: the clearest signal</h3>
             
-            <h3>Weekdays vs. weekends</h3>
+            <p>ATUS data shows that Americans aged 15–19 now spend <span class="inline-stat">one-third</span> of the time socializing with friends compared to twenty years ago—a 45% decline since 2003.<sup>1</sup></p>
             
-            <p>Teen time use shifts dramatically between school days and weekends:</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Activity</th>
-                        <th class="numeric">Weekday</th>
-                        <th class="numeric">Weekend</th>
-                        <th class="numeric">Δ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Total leisure</td>
-                        <td class="numeric">4h 56m</td>
-                        <td class="numeric">6h 23m</td>
-                        <td class="numeric">+1h 27m</td>
-                    </tr>
-                    <tr>
-                        <td>Games/computer</td>
-                        <td class="numeric">1h 15m</td>
-                        <td class="numeric">1h 29m</td>
-                        <td class="numeric">+14m</td>
-                    </tr>
-                    <tr>
-                        <td>Socializing</td>
-                        <td class="numeric">28m</td>
-                        <td class="numeric">54m</td>
-                        <td class="numeric">+26m</td>
-                    </tr>
-                    <tr>
-                        <td>TV watching</td>
-                        <td class="numeric">1h 54m</td>
-                        <td class="numeric">2h 16m</td>
-                        <td class="numeric">+22m</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="chart-source">Source: BLS ATUS Table 11B, 2024</p>
-            
-            <p>Notably, socializing nearly doubles on weekends—but even then reaches only 54 minutes. The 3pm–3am window is primarily a weekday phenomenon, when teens have under 5 hours of leisure and less than half an hour of face-to-face social time.</p>
-            
-            
-            <!-- SECTION II: DIGITAL LIFE -->
-            <h2>II. Digital Life: What Multiple Sources Tell Us</h2>
-            
-            <p>ATUS provides the most rigorous time-use data available, but its categories were designed for an earlier era. "Games and computer use for leisure" captures something, but not everything, about digital life. To understand how teenagers engage with technology, we must triangulate across multiple sources.</p>
-            
-            <h3>Platform usage (Pew Research, December 2024)</h3>
-            
-            <p>Pew Research Center surveys teenagers directly about their platform usage. Their most recent data, from October 2024, shows:</p>
-            
-            <div class="chart-container">
-                <div class="chart-title">Teen Platform Usage (% who say they use)</div>
-                
-                <div class="bar-chart">
-                    <div class="bar-row">
-                        <span class="bar-label">YouTube</span>
-                        <div class="bar-container">
-                            <div class="bar primary" style="width: 90%"></div>
-                        </div>
-                        <span class="bar-value">90%</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">TikTok</span>
-                        <div class="bar-container">
-                            <div class="bar secondary" style="width: 63%"></div>
-                        </div>
-                        <span class="bar-value">63%</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Instagram</span>
-                        <div class="bar-container">
-                            <div class="bar secondary" style="width: 61%"></div>
-                        </div>
-                        <span class="bar-value">61%</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Snapchat</span>
-                        <div class="bar-container">
-                            <div class="bar tertiary" style="width: 55%"></div>
-                        </div>
-                        <span class="bar-value">55%</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">Facebook</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 32%"></div>
-                        </div>
-                        <span class="bar-value">32%</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">X (Twitter)</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 17%"></div>
-                        </div>
-                        <span class="bar-value">17%</span>
-                    </div>
-                </div>
-                <p class="chart-source">Source: Pew Research Center, survey of 1,391 U.S. teens, Sept–Oct 2024</p>
-            </div>
-            
-            <p>YouTube's dominance is striking: 9 in 10 teens use it, and 73% visit daily. This aligns with ATUS's finding that "watching TV" (which includes streaming) remains the largest leisure category. The distinction between "TV" and "YouTube" has largely collapsed for this generation.</p>
-            
-            <h3>Intensity of use</h3>
-            
-            <p>Pew also asks about frequency. The shares who describe their use as "almost constant":</p>
-            
-            <div class="stat-row">
-                <div class="stat">
-                    <div class="value">16%</div>
-                    <div class="desc">TikTok</div>
-                </div>
-                <div class="stat">
-                    <div class="value">15%</div>
-                    <div class="desc">YouTube</div>
-                </div>
-                <div class="stat">
-                    <div class="value">12%</div>
-                    <div class="desc">Instagram</div>
-                </div>
-                <div class="stat">
-                    <div class="value">12%</div>
-                    <div class="desc">Snapchat</div>
-                </div>
-            </div>
-            
-            <p>Overall, <span class="inline-stat">one-third of teens</span> report being on at least one of these platforms "almost constantly," and <span class="inline-stat">46%</span> say they are online almost constantly in general—up from 24% a decade ago.</p>
-            
-            <h3>Total social media time (Gallup, 2023)</h3>
-            
-            <p>A Gallup survey provides the most direct measure of time spent specifically on social media:</p>
-            
-            <div class="big-number">
-                <div class="number">4.8</div>
-                <div class="label">Average hours per day on social media (ages 13–19)</div>
-            </div>
-            
-            <p>This figure—nearly 5 hours daily—comes from teen self-reports. Key variations:</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Group</th>
-                        <th class="numeric">Hours/Day</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>13-year-olds</td>
-                        <td class="numeric">~4.0</td>
-                    </tr>
-                    <tr>
-                        <td>17-year-olds</td>
-                        <td class="numeric">~6.0</td>
-                    </tr>
-                    <tr>
-                        <td>Girls</td>
-                        <td class="numeric">5.3</td>
-                    </tr>
-                    <tr>
-                        <td>Boys</td>
-                        <td class="numeric">4.4</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="chart-source">Source: Gallup, October 2023</p>
-            
-            <p>Notably, 51% of teens reported spending 4+ hours per day on social media. The distribution is heavily skewed—a substantial minority of teenagers are spending the majority of their waking leisure hours on these platforms.</p>
-            
-            <h3>A methodological note</h3>
-            
-            <div class="method-box">
-                <h5>Why the numbers don't match</h5>
-                <p>ATUS shows 1h 19m of "games and computer use for leisure." Gallup shows 4.8 hours of social media. How can both be true?</p>
-                <p>The answer lies in methodology. ATUS asks about primary activities—what you were mainly doing at each moment. Gallup asks teens to estimate total time on social media, which may include background use while doing other things (eating, watching TV, even in class). Neither number is "wrong," but they measure different things. ATUS likely undercounts passive/background phone use; self-report surveys likely overcount because attention feels like time.</p>
-                <p>The truth is probably somewhere between: more than the diary captures, less than teens perceive.</p>
-            </div>
-            
-            <h3>Demographic disparities</h3>
-            
-            <p>Digital engagement varies significantly by race and ethnicity. Pew finds:</p>
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>Group</th>
-                        <th class="numeric">Online "almost constantly"</th>
-                        <th class="numeric">TikTok "almost constantly"</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Hispanic teens</td>
-                        <td class="numeric">58%</td>
-                        <td class="numeric">25%</td>
-                    </tr>
-                    <tr>
-                        <td>Black teens</td>
-                        <td class="numeric">53%</td>
-                        <td class="numeric">28%</td>
-                    </tr>
-                    <tr>
-                        <td>White teens</td>
-                        <td class="numeric">37%</td>
-                        <td class="numeric">8%</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="chart-source">Source: Pew Research Center, December 2024</p>
-            
-            <p>These gaps—often exceeding 20 percentage points—are larger than the increases in screen time that generate headlines. We don't yet understand whether this reflects different access patterns, cultural factors, or measurement artifacts. What we do know is that any analysis of "teens" as a monolith misses crucial variation.</p>
-            
-            
-            <!-- SECTION III: BEYOND SCREENS -->
-            <h2>III. Beyond Screens: The Activities We're Losing</h2>
-            
-            <p>The debate about teen screen time often centers on whether digital media is harmful. A different question may be more important: what are screens displacing? The evidence suggests several forms of activity have declined precipitously—and that a critical mechanism has broken.</p>
-            
-            <div class="emphasis-box">
-                <p><strong>The broken boredom mechanism:</strong> Once upon a time, boredom nudged teens to do things. The smartphone and the trillion-dollar companies who profit from them have defeated boredom. That leads to an idleness that may be deeply harmful to young people—not because phones are inherently toxic, but because they've eliminated the discomfort that once prompted action.</p>
-            </div>
-            
-            <h3>Time with friends: A collapse</h3>
-            
-            <p>Perhaps no trend is more striking than the decline in face-to-face socializing. ATUS data shows Americans aged 15–19 now spend <span class="inline-stat">one-third</span> of the time socializing with friends compared to 20 years ago.<sup>3</sup></p>
-            
-            <div class="big-number">
-                <div class="number">45%</div>
-                <div class="label">Decline in teen face-to-face socializing since 2003</div>
-            </div>
-            
-            <p>The Monitoring the Future survey, which has tracked high school seniors since the 1970s, shows the trajectory in detail:</p>
+            <p>The Monitoring the Future survey, which has tracked high school seniors since the 1970s, tells the same story with more texture:</p>
             
             <table>
                 <thead>
                     <tr>
                         <th>Year</th>
-                        <th class="numeric">% who meet friends "almost daily"</th>
+                        <th class="numeric">12th graders who meet friends "almost daily"</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -915,74 +568,150 @@
                     </tr>
                 </tbody>
             </table>
-            <p class="chart-source">Source: Monitoring the Future, University of Michigan</p>
             
-            <p>The decline was gradual from the 1970s to 2010, then accelerated sharply—coinciding precisely with smartphone adoption. By 2017, 12th-graders spent an hour less on in-person social interaction per day than their Gen X predecessors.</p>
+            <p>The decline was gradual from the 1970s through 2010—about a point every four years. Then it accelerated sharply, dropping 16 points in seven years. By 2017, 12th graders spent a full hour less per day on in-person social interaction than their Gen X predecessors.</p>
             
             <blockquote>
                 "Going to the mall has gone down. Driving in the car for fun has gone down. Going to the movies has gone down. We're talking about kids who are spending five, six, seven hours a day on social media."
                 <cite>— Jean Twenge, San Diego State University</cite>
             </blockquote>
             
-            <p>Critically, this decline in socializing has coincided with a rise in loneliness. Among 12th graders, 39% said they "often felt lonely" in 2017, up from 26% in 2012—an all-time high since the question was first asked in 1977.<sup>4</sup></p>
+            <p>The timing is not subtle. The inflection point—2010 to 2012—coincides precisely with smartphone adoption crossing 50% among teenagers and the rise of Instagram and Snapchat.</p>
             
-            <h3>Reading: Near extinction</h3>
+            <h3>Other displacement effects</h3>
             
-            <p>ATUS shows that 15–19 year olds read for pleasure an average of <span class="inline-stat">9 minutes per day</span>. This is not a typo. Nine minutes.</p>
+            <p>The decline in socializing is the clearest trend, but not the only one:</p>
             
-            <p>A comprehensive study from the University of Florida and University College London, analyzing 20 years of ATUS data, found:</p>
+            <p><strong>Reading:</strong> ATUS shows 15–19 year olds read for pleasure an average of 9 minutes per day. A University of Florida study found daily reading has declined 40% over twenty years—about 3% annually. In the late 1970s, 60% of 12th graders read a book or magazine almost daily; by 2016, that figure was 16%.<sup>2</sup></p>
             
-            <div class="key-finding">
-                <div class="key-finding-label">Key Finding</div>
-                <p>Daily reading for pleasure in the United States has declined by more than 40% over the last 20 years—"a sustained, steady decline of about 3% per year."</p>
+            <p><strong>Sleep:</strong> The CDC reports that only 22% of high school students get the recommended 8+ hours on school nights, down from 31% in 2007. Sleep researchers point to evening phone use as a primary culprit.<sup>3</sup></p>
+            
+            <p><strong>Part-time work:</strong> Teen labor force participation has declined from 52% in 2000 to 37% today. Some of this reflects economic shifts, but the steepest drops came after 2010.<sup>4</sup></p>
+            
+            <p><strong>Sports participation (boys):</strong> While overall youth sports rebounded post-pandemic, regular participation among boys fell from 50% in 2013 to 41% in 2023. Teen (13–17) regular participation dropped 3% even in 2024.<sup>5</sup></p>
+            
+            <div class="emphasis-box">
+                <p><strong>The directional truth:</strong> Regardless of the exact screen time number, teenagers are spending substantially less time with friends in person, less time reading, less time sleeping, less time working, and (for boys) less time in sports than they did fifteen years ago. These are the activities being displaced. This is what we should be measuring.</p>
             </div>
             
-            <p>The National Assessment of Educational Progress confirms the trajectory for young people specifically:</p>
             
-            <table>
-                <thead>
-                    <tr>
-                        <th>Measure</th>
-                        <th class="numeric">2012</th>
-                        <th class="numeric">2023</th>
-                        <th class="numeric">Change</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>13-year-olds reading daily for fun</td>
-                        <td class="numeric">27%</td>
-                        <td class="numeric">14%</td>
-                        <td class="numeric">−13 pts</td>
-                    </tr>
-                    <tr>
-                        <td>Average reading score (13-year-olds)</td>
-                        <td class="numeric">263</td>
-                        <td class="numeric">256</td>
-                        <td class="numeric">−7 pts</td>
-                    </tr>
-                </tbody>
-            </table>
-            <p class="chart-source">Source: National Endowment for the Arts / NAEP</p>
+            <!-- SECTION III: WHY DISPLACEMENT MATTERS -->
+            <h2>III. Why Displacement Matters</h2>
             
-            <p>In the late 1970s, 60% of 12th-graders read a book or magazine almost daily. By 2016, that figure was 16%.<sup>5</sup></p>
+            <p>The debate about teen screen time typically focuses on whether phones are <em>harmful</em>—whether they cause anxiety, depression, or addiction. This is the wrong frame. The more important question is what teenagers are <em>losing</em> when screens crowd out other activities.</p>
             
-            <h3>Sports participation: A complicated picture</h3>
+            <h3>The developmental case</h3>
             
-            <p>Unlike reading and socializing, sports participation tells a more nuanced story. The Aspen Institute's State of Play 2025 report finds:</p>
+            <p>Jonathan Haidt, in <em>The Anxious Generation</em>, argues that American childhood underwent a fundamental transformation between 2010 and 2015—from "play-based childhood" to "phone-based childhood."</p>
             
-            <ul style="margin: 20px 0 20px 24px;">
-                <li><strong>Overall participation is rebounding:</strong> 65% of youth ages 6–17 played a sport at least once in 2024—the highest since tracking began in 2012.</li>
-                <li><strong>But boys are playing less:</strong> Regular sports participation among boys dropped from 50% in 2013 to 41% in 2023.</li>
-                <li><strong>And teen participation is declining:</strong> Regular participation for ages 13–17 fell 3% in 2024, even as younger children increased.</li>
-                <li><strong>Income gaps are widening:</strong> The participation gap between highest and lowest income households grew from 13.6 points in 2012 to 20.2 points in 2024.</li>
-            </ul>
+            <p>His argument isn't primarily about screens being toxic. It's about what screens replaced:</p>
             
-            <p>ATUS confirms that 15–19 year olds average 38 minutes per day on sports and exercise—but this is an average across all teens, including the majority who do zero on any given day. The distribution matters: some teens are highly active; many are not active at all.</p>
+            <blockquote>
+                "We've had a play-based childhood for literally 200 million years because we're mammals and all mammals play. That's how we wired up our brains. Somewhere in the 1990s, it stopped—and stopped dead by 2010. It faded away and was replaced, very suddenly, by the phone-based childhood between 2010 and 2015."
+            </blockquote>
             
-            <h3>What we can't measure</h3>
+            <p>Play—especially unstructured, unsupervised play with peers—is how children have always developed social skills, risk assessment, emotional regulation, and resilience. The displacement of play by screens isn't just a lifestyle change; it's a disruption to a developmental process that mammals have relied on for hundreds of millions of years.</p>
             
-            <p>The activities listed above—socializing, reading, sports—are at least tracked by major surveys. Other activities we might consider important for flourishing are barely measured at all:</p>
+            <h3>The labor market case</h3>
+            
+            <p>Economists have documented a dramatic shift in what the labor market rewards. Research from Harvard's David Deming shows that since 1980, jobs requiring high levels of social skills have grown by 12 percentage points as a share of the labor market, while jobs requiring only cognitive skills have shrunk.<sup>6</sup></p>
+            
+            <p>The Hamilton Project reports that labor market returns to "non-cognitive skills"—teamwork, communication, adaptability, persistence—have nearly doubled since 1979. The premium for having <em>both</em> cognitive and non-cognitive skills has increased by about 6 percentage points per decade.<sup>7</sup></p>
+            
+            <div class="stat-row">
+                <div class="stat">
+                    <div class="value">2×</div>
+                    <div class="desc">Increase in wage returns to<br>non-cognitive skills since 1979</div>
+                </div>
+                <div class="stat">
+                    <div class="value">+6 pts</div>
+                    <div class="desc">Per-decade increase in premium<br>for cognitive + non-cognitive</div>
+                </div>
+            </div>
+            
+            <p>Where do teenagers develop non-cognitive skills? Not primarily in classrooms. They develop them in the 3pm–3am hours: through part-time jobs, team sports, unstructured socializing, navigating independence, managing commitments, dealing with difficult people, recovering from failures.</p>
+            
+            <p>If those hours are increasingly spent on screens, we should expect the development of non-cognitive skills to suffer—at precisely the moment when the labor market is rewarding them more than ever.</p>
+            
+            <h3>The therapeutic case</h3>
+            
+            <p>Clinical psychology offers a third line of evidence. Behavioral Activation (BA), one of the most effective evidence-based treatments for depression, rests on a simple premise: <strong>do more, feel better</strong>.</p>
+            
+            <p>A meta-analysis of 16 randomized studies found that activity scheduling—helping depressed patients increase engagement in pleasant and meaningful activities—produced effect sizes of 0.87, comparable to cognitive therapy and antidepressant medication.<sup>8</sup> The intervention is "relatively uncomplicated, time-efficient and does not require complex skills from patients or therapists."</p>
+            
+            <p>The inverse is also true: decreased activity leads to worse mood, which leads to further withdrawal, creating a vicious cycle. This is precisely the pattern we see in languishing teenagers—not clinically depressed, but inactive, and the inactivity breeds low-grade malaise.</p>
+            
+            <h3>Independence Therapy</h3>
+            
+            <p>Camilo Ortiz, a clinical psychologist at Long Island University, has developed this insight into a new therapeutic approach called "Independence Therapy." Working with clinically anxious children aged 9–14, he found that giving them "mega-doses of independence"—assignments to do new things on their own, without parents—reduced anxiety as effectively as traditional exposure therapy.<sup>9</sup></p>
+            
+            <p>The mechanism isn't mysterious. As Ortiz explains: "When we do everything for them, we subtract all the uncertainty and then they suck at it. And then they're so anxious because you put them in any situation that has an element of uncertainty and they fall apart."</p>
+            
+            <p>One patient, a 9-year-old girl afraid to sleep in her own bed, was given assignments to take public transit alone, buy items at the store, and navigate small setbacks. During the final week of treatment, unprompted, she began sleeping in her own bed—something she had never done before.</p>
+            
+            <blockquote>
+                "Just as anxiety becomes generalized and everything becomes too dangerous and too scary, competence and confidence also generalize. Children's competence gives them confidence, and then the parents get it too, and they're spiraling up instead of spiraling down."
+                <cite>— Lenore Skenazy, Let Grow</cite>
+            </blockquote>
+            
+            <p>This is the therapeutic parallel to the developmental and economic arguments: real-world activity builds skills, confidence, and wellbeing. Screens, whatever their direct effects, displace the activities that produce these benefits.</p>
+            
+            
+            <!-- SECTION IV: THE SUBSTITUTION HYPOTHESIS -->
+            <h2>IV. The Substitution Hypothesis</h2>
+            
+            <p>If displacement is the problem, the solution isn't primarily about reducing screen time. It's about <em>substituting</em> something better in its place.</p>
+            
+            <h3>Why suppression alone isn't working</h3>
+            
+            <p>Efforts to restrict teen screen use have shown limited success outside of school:</p>
+            
+            <p><strong>China</strong> has tried since 2019 with various restrictions, including video game time limits. A <em>Nature Human Behaviour</em> study found "no credible evidence" the tactics reduced gaming.<sup>10</sup></p>
+            
+            <p><strong>Britain's</strong> Online Safety Act took effect in late 2024. VPN downloads multiplied by twenty times.</p>
+            
+            <p><strong>Parental controls</strong>—screen time limits, content filters—are widely available but rarely effective. The dynamic of a parent peering over a teenager's shoulder asking "Is that really homework?" is not a sustainable strategy.</p>
+            
+            <p>School phone bans during the 8am–3pm hours have strong logic and growing evidence behind them. But from 3pm to 3am, when teens have more autonomy and parents have less control, suppression faces structural limits.</p>
+            
+            <h3>The broken boredom mechanism</h3>
+            
+            <p>There's a deeper reason suppression fails. Once upon a time, boredom nudged teenagers to do things. The discomfort of having nothing to do propelled them into the world—to call a friend, ride a bike, get a job, find trouble, discover something.</p>
+            
+            <p>Smartphones have defeated boredom. Trillion-dollar companies employ the world's best engineers to ensure that no teenager ever has to sit with discomfort for more than a few seconds. This eliminates the nudge mechanism that once pushed young people toward real-world activity.</p>
+            
+            <div class="key-finding">
+                <div class="key-finding-label">Core Insight</div>
+                <p>Substitution's advantage is that it inherently works. If you're rock climbing, you're probably off your phone. If you're at Starbucks with friends, you're engaged in face-to-face interaction. The goal is not to make screens less attractive, but to make real life more attractive.</p>
+            </div>
+            
+            <h3>What flourishing looks like</h3>
+            
+            <p>Flourishing teenagers share a common pattern: busy calendars. Their out-of-school hours are filled with a portfolio of activities across multiple domains:</p>
+            
+            <div class="portrait-box">
+                <h5>The Portfolio of a Flourishing Teen</h5>
+                <ul>
+                    <li><strong>Physical:</strong> A sport, gym routine, dance class, outdoor activity</li>
+                    <li><strong>Social:</strong> Regular in-person time—hangouts, pickup games, shared hobbies</li>
+                    <li><strong>Economic:</strong> A part-time job (up to 10–15 hours/week)</li>
+                    <li><strong>Creative:</strong> Music, art, building, coding—making rather than consuming</li>
+                    <li><strong>Community:</strong> Youth group, scouting, volunteering, civic engagement</li>
+                    <li><strong>Rest:</strong> Adequate sleep—7–8 hours most nights</li>
+                </ul>
+            </div>
+            
+            <p>Some teenagers build this portfolio through school activities—sports teams, theater, band, clubs. Others assemble it independently through community organizations, jobs, and informal networks. Both paths work. What matters is the result: a life that crowds out passive screen time by being genuinely engaging.</p>
+            
+            
+            <!-- SECTION V: WHAT WE NEED -->
+            <h2>V. What We Need</h2>
+            
+            <p>If this analysis is right, the research and policy agenda should shift. We need less attention to screen time itself and more attention to what screens displace.</p>
+            
+            <h3>1. Better measurement of what kids are actually doing</h3>
+            
+            <p>The current measurement landscape is backwards. We have multiple estimates of screen hours (even if they don't agree) but almost no systematic data on the activities that matter most for flourishing:</p>
             
             <table>
                 <thead>
@@ -994,224 +723,158 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Music lessons/practice</td>
-                        <td>Poor</td>
-                        <td>No national systematic tracking</td>
+                        <td>Screen time</td>
+                        <td>Multiple sources</td>
+                        <td>Conflicting methodologies</td>
                     </tr>
                     <tr>
-                        <td>Arts participation</td>
-                        <td>Poor</td>
-                        <td>Sporadic surveys only</td>
+                        <td>Time with friends (in person)</td>
+                        <td>ATUS only</td>
+                        <td>Declining, per diary data</td>
                     </tr>
                     <tr>
-                        <td>Religious/spiritual activity</td>
-                        <td>Moderate</td>
-                        <td>ATUS tracks; declining</td>
+                        <td>Part-time work</td>
+                        <td>BLS, moderate</td>
+                        <td>Declining participation</td>
+                    </tr>
+                    <tr>
+                        <td>Sports participation</td>
+                        <td>Aspen, moderate</td>
+                        <td>Complex picture</td>
+                    </tr>
+                    <tr>
+                        <td>Music/arts practice</td>
+                        <td>Very poor</td>
+                        <td>No systematic tracking</td>
+                    </tr>
+                    <tr>
+                        <td>Time outdoors</td>
+                        <td>Very poor</td>
+                        <td>Almost no data</td>
+                    </tr>
+                    <tr>
+                        <td>Unstructured play</td>
+                        <td>Very poor</td>
+                        <td>No national measure</td>
                     </tr>
                     <tr>
                         <td>Volunteering</td>
                         <td>Moderate</td>
-                        <td>ATUS tracks; low for teens</td>
-                    </tr>
-                    <tr>
-                        <td>Time in nature</td>
-                        <td>Very poor</td>
-                        <td>Almost no systematic data</td>
-                    </tr>
-                    <tr>
-                        <td>Unstructured outdoor play</td>
-                        <td>Very poor</td>
-                        <td>No national measure exists</td>
+                        <td>ATUS tracks; low rates</td>
                     </tr>
                 </tbody>
             </table>
             
-            <div class="emphasis-box">
-                <p><strong>The measurement asymmetry:</strong> We can tell you that teens average 4.8 hours per day on social media. We cannot tell you how many hours they spend outdoors, making art, playing music, or engaging in unstructured play. The activities we measure reflect our anxieties, not necessarily what matters most for development.</p>
-            </div>
+            <p>The activities we measure reflect our anxieties, not necessarily what matters. We need Pew and Gallup to ask not "how much time on social media?" but "how much time with friends in person this week?" and "how many hours of physical activity?" and "did you work or volunteer?"</p>
             
+            <h3>2. An "hours of flourishing" metric</h3>
             
-            <!-- SECTION IV: SUPPRESSION VS. SUBSTITUTION -->
-            <h2>IV. Two Theories of Change</h2>
+            <p>Instead of measuring harm, we should measure the positive. We propose tracking <strong>hours of flourishing per week</strong>: the time spent on activities the research suggests actually build wellbeing and capability.</p>
             
-            <p>Social psychologist Jonathan Haidt has offered the most influential framework for understanding teen screen time. In <em>The Anxious Generation</em> (2024), he argues that American childhood underwent a fundamental transformation between 2010 and 2015—a shift from "play-based childhood" to "phone-based childhood."</p>
-            
-            <blockquote>
-                "We've had a play-based childhood for literally 200 million years because we're mammals and all mammals play. That's how we wired up our brains. Somewhere in the 1990s, it stopped—and stopped dead by 2010. It faded away and was replaced, very suddenly, by the phone-based childhood between 2010 and 2015."
-            </blockquote>
-            
-            <p>Haidt identifies four mechanisms by which phone-based childhood harms development: social deprivation, sleep deprivation, attention fragmentation, and addiction. His policy recommendations center on <strong>suppression</strong>: no smartphones before high school, no social media before 16, phone-free schools.</p>
-            
-            <p>The school-level recommendations have gained traction. Many districts now ban phones during class. But outside of school—in the 3pm–3am window—is suppression working?</p>
-            
-            <h3>The limits of suppression</h3>
-            
-            <p>Early evidence suggests teens find workarounds:</p>
-            
-            <ul style="margin: 20px 0 20px 24px;">
-                <li><strong>China</strong> has tried since 2019 with various restrictions, including video game time limits. A <em>Nature Human Behaviour</em> paper found "no credible evidence" the tactics reduced gaming.<sup>6</sup></li>
-                <li><strong>Britain's</strong> Online Safety Act took effect in late 2024; VPN downloads multiplied by twenty times.</li>
-                <li><strong>Parental controls</strong> offered by Big Tech—screen time limits, content filters—are widely available but rarely effective. The dynamic of a parent peering over a teenager's shoulder asking "Is that really homework?" is not a winning strategy.</li>
-            </ul>
-            
-            <p>None of this means suppression is worthless. School phone bans during the 8am–3pm hours have strong logic and growing evidence behind them. But from 3pm to 3am, when teens have more autonomy and parents have less control, suppression faces structural limits.</p>
-            
-            <h3>The case for substitution</h3>
-            
-            <p>An alternative theory focuses not on reducing screen time directly, but on filling teens' lives with more compelling real-world alternatives. The logic:</p>
-            
-            <div class="key-finding">
-                <div class="key-finding-label">Core Insight</div>
-                <p>Substitution's advantage is that it inherently works. If you're rock climbing, you're probably off your phone. If you're at Starbucks with friends, you're engaged in face-to-face interaction. The goal is not to make screens less attractive, but to make real life more attractive.</p>
-            </div>
-            
-            <p>This doesn't mean substitution is easy. Because screens have defeated boredom, languishing teens feel no discomfort that would push them toward activity. Traditional mentorship programs—"Hey, want to go to a ball game?"—don't work well with this population. They're not bored, so anyone trying to engage them has to be exceptionally good at motivation and persistence.</p>
-            
-            <p>But substitution offers something suppression doesn't: a positive vision of what the 3pm–3am hours could look like.</p>
-            
-            
-            <!-- SECTION V: THE FLOURISHING FRAMEWORK -->
-            <h2>V. What Flourishing Looks Like</h2>
-            
-            <p>If we shift from preventing harm to promoting flourishing, we need a different framework—and different metrics. What does a flourishing teen's 3pm–3am window actually contain?</p>
-            
-            <h3>Flourishing teens build busy calendars</h3>
-            
-            <p>Observationally, teenagers who are thriving share a common pattern: their out-of-school hours are filled with activities. Not random activities, but a portfolio that spans multiple domains:</p>
-            
-            <div class="portrait-box">
-                <h5>The Portfolio of a Flourishing Teen</h5>
-                <ul>
-                    <li><strong>Physical:</strong> A sport, gym routine, dance class, or outdoor activity</li>
-                    <li><strong>Social:</strong> Regular in-person time with friends—Starbucks hangouts, pickup games, shared hobbies</li>
-                    <li><strong>Economic:</strong> A part-time job—restaurant, retail, babysitting—up to 10–15 hours/week</li>
-                    <li><strong>Creative:</strong> Music, art, writing, building, coding—something they make rather than consume</li>
-                    <li><strong>Community:</strong> Church youth group, scouting, volunteering, civic engagement</li>
-                    <li><strong>Rest:</strong> Adequate sleep—at least 7–8 hours most nights</li>
-                </ul>
-            </div>
-            
-            <p>Each of these domains has its own research literature showing benefits. But the key insight is that flourishing isn't about optimizing any single activity—it's about the combination. A busy calendar crowds out passive screen time by making real life more engaging.</p>
-            
-            <p>Some flourishing teens build this portfolio through school-based activities: sports teams, theater, band, clubs. Others assemble it independently through community organizations, jobs, and informal social networks. Both paths work—what matters is the result.</p>
-            
-            <h3>A new metric: Hours of flourishing</h3>
-            
-            <p>If languishing is the problem, we need a metric that captures its opposite. We propose: <strong>hours of flourishing per week</strong>.</p>
-            
-            <p>This metric counts weekly hours spent on:</p>
+            <p>A working definition:</p>
             <ul style="margin: 20px 0 20px 24px;">
                 <li>Physical fitness and sports</li>
                 <li>In-person time with friends</li>
-                <li>Sleep above 5 hours per night</li>
+                <li>Sleep above 5–6 hours per night</li>
                 <li>Work or volunteering (up to 10–15 hours)</li>
                 <li>Pleasure reading</li>
-                <li>Creative activities, outdoor time, community participation</li>
+                <li>Creative activity, outdoor time, community participation</li>
             </ul>
             
-            <p>Based on available data and field observation, we estimate the current distribution:</p>
+            <p>Based on available data and clinical observation, we estimate the current distribution among teenagers:</p>
             
             <div class="stat-row">
                 <div class="stat">
                     <div class="value">~20 hrs</div>
-                    <div class="desc">75th percentile teen</div>
+                    <div class="desc">75th percentile</div>
                 </div>
                 <div class="stat">
                     <div class="value">~10 hrs</div>
-                    <div class="desc">Median teen</div>
+                    <div class="desc">Median</div>
                 </div>
                 <div class="stat">
                     <div class="value">~2 hrs</div>
-                    <div class="desc">25th percentile teen</div>
+                    <div class="desc">25th percentile</div>
                 </div>
             </div>
             
-            <p>A teen at the 75th percentile might have: an after-school sport (6 hrs), a weekend job (8 hrs), some hangout time with friends (3 hrs), and a hobby (3 hrs). A teen at the 25th percentile might have: almost nothing—perhaps occasional socializing and sporadic exercise, but no consistent activities filling their calendar.</p>
+            <p>The gap between 20 hours and 2 hours represents vastly different developmental trajectories. Closing that gap should be the goal.</p>
             
-            <p>The gap between 20 hours and 2 hours represents vastly different developmental trajectories—and vastly different qualities of life during adolescence itself.</p>
+            <h3>3. Understanding the economics of substitution</h3>
             
+            <p>The critical unanswered question: what happens if we substitute flourishing activities back in?</p>
             
-            <!-- SECTION VI: RESEARCH AGENDA -->
-            <h2>VI. What We Still Don't Know</h2>
+            <p>Haidt argues that phones have displaced play, and makes a series of developmental arguments for why that matters. Clinical research on behavioral activation and independence therapy suggests that increasing real-world activity produces measurable benefits. Labor economists have documented rising returns to non-cognitive skills.</p>
             
-            <p>Synthesizing all available data reveals not just what we know, but the contours of what we don't. Addressing teen languishing will require new research in several areas.</p>
-            
-            <h3>The syndrome problem</h3>
-            
-            <p>Teen languishing resembles what pediatricians call "failure to thrive" (FTT) in infants: not a single-organ disease but a syndrome with interacting causes. FTT involves poor weight gain, lethargy, and sleep trouble—but the underlying factors span feeding routines, parental capacity, reflux, infections, and stress. The fix is never just "see GI" or "see psych." It requires coordinated intervention across domains.</p>
-            
-            <p>Teen languishing works similarly. The research silos—mental health, parenting, K–12 education, youth development, screen addiction, workforce development—each see one piece. But the phenomenon crosses all of them, unified only by the daily schedule: how teens actually spend the 3pm–3am hours.</p>
-            
-            <p>We don't yet have the integrated research infrastructure to study the syndrome as a syndrome.</p>
-            
-            <h3>Three urgent questions</h3>
-            
-            <h4>1. What is the actual distribution?</h4>
-            <p>Most data reports averages. But averages obscure distribution. Common Sense Media found that 41% of teens spent more than 8 hours per day on screens in 2021, up from 29% in 2019. This suggests a bimodal distribution: some teens use screens moderately; others are immersed almost entirely. We don't know enough about who falls into each group, or what distinguishes them.</p>
-            
-            <h4>2. What is actually happening during screen time?</h4>
-            <p>We measure duration but not content or context. An hour on YouTube could mean watching educational content, following a makeup tutorial, viewing violent content, or passively scrolling algorithmic recommendations. An hour on social media could mean messaging close friends, comparing oneself to influencers, encountering harassment, or creating content. Time-based metrics tell us almost nothing about experience.</p>
-            
-            <h4>3. How do we increase participation in flourishing activities?</h4>
-            <p>We have extensive research on what activities benefit teens. We have almost no rigorous field experiments on how to get languishing teens to actually do them. The challenge is harder than it sounds: because screens have eliminated boredom, traditional motivational approaches don't work. We need R&D on engagement strategies—and honest measurement of what works.</p>
-            
-            <h3>A research agenda</h3>
-            
-            <div class="method-box">
-                <h5>Four Research Priorities</h5>
-                <p><strong>1. Comprehensive time-use synthesis:</strong> Extract and publish teen-specific ATUS data annually, paired with methodological work to better capture digital activity within the diary framework.</p>
-                <p><strong>2. Positive activity measurement:</strong> Develop and standardize tracking of time outdoors, in creative activity, in unstructured play, and with friends—the activities that may matter most for flourishing.</p>
-                <p><strong>3. Hours-of-flourishing baseline:</strong> Establish population-level estimates of the distribution of flourishing hours, with demographic breakdowns, to enable progress tracking.</p>
-                <p><strong>4. Intervention R&D:</strong> Fund and rigorously evaluate programs that aim to increase beneficial activities—not just decrease screen time—measuring both time-use and wellbeing outcomes.</p>
-            </div>
-            
-            
-            <!-- SECTION VII: CONCLUSION -->
-            <h2>VII. From Languishing to Flourishing</h2>
-            
-            <p>The current conversation about teenagers and screens is stuck. One side emphasizes harms and calls for restrictions; the other notes weak correlations and counsels caution. Neither side offers a compelling positive vision of what adolescent life should look like.</p>
-            
-            <p>This report has tried to shift the frame. The question is not only "how do we reduce screen time?" but "how do we help teenagers build lives worth living from 3pm to 3am?"</p>
-            
-            <p>The answer won't come from any single intervention. It will require:</p>
+            <p>But we don't have rigorous field experiments that actually substitute activities for screen time and measure the results. We need R&D on:</p>
             
             <ul style="margin: 20px 0 20px 24px;">
-                <li><strong>Better data</strong> on how teens actually spend their time, including the activities we want to promote</li>
-                <li><strong>Honest acknowledgment</strong> of what we don't know, including the limits of suppression-based approaches</li>
-                <li><strong>Field experimentation</strong> with substitution strategies that can compete with the pull of the screen</li>
-                <li><strong>Cross-silo collaboration</strong> that treats languishing as the syndrome it is</li>
-                <li><strong>A new metric</strong>—hours of flourishing—that measures progress toward a positive goal</li>
+                <li>Which activities produce the largest wellbeing and developmental gains?</li>
+                <li>How do you motivate languishing teens who aren't bored—because screens have solved boredom?</li>
+                <li>What's the dose-response relationship between flourishing activities and outcomes?</li>
+                <li>Do the benefits vary by demographic group, family structure, or baseline characteristics?</li>
             </ul>
             
-            <p>We have built a research infrastructure around documenting harm. We have not built an equivalent infrastructure for understanding—and promoting—flourishing. That is the work ahead.</p>
+            <p>We know what a flourishing teen's calendar looks like. We don't know enough about how to help languishing teens build one.</p>
+            
+            
+            <!-- SECTION VI: CONCLUSION -->
+            <h2>VI. From Languishing to Flourishing</h2>
+            
+            <p>A suburban Boston-area teacher recently described his median student:</p>
+            
+            <div class="portrait-box">
+                <h5>Portrait of the Languishing Teen</h5>
+                <ul>
+                    <li>Heavy screen time after school, over the weekend, and during the summer</li>
+                    <li>Little time outdoors, reading books, walking, engaged in fitness, working or volunteering</li>
+                    <li>Apathy; maybe low-grade anxiety or depression (unclear if clinical)</li>
+                    <li>Going through the motions, little direction or ambition</li>
+                    <li>No clear out-of-school "passions"</li>
+                    <li>Hasn't found "their people"</li>
+                </ul>
+            </div>
+            
+            <p>This portrait—recognizable to teachers, parents, and teenagers themselves—captures something that doesn't fit neatly into clinical categories. These kids aren't depressed enough for diagnosis. They're not in crisis. They're just... languishing.</p>
+            
+            <p>As Yuval Levin wrote: "The challenges to America's social order now seem less like exorbitant human desires driving people's lives out of control and more like an absence of energy and drive leaving people languishing and enervated."<sup>11</sup></p>
+            
+            <p>The screen time debate has been dominated by questions of harm. But harm may be the wrong frame. The question isn't whether phones are bad for teenagers. The question is whether the life that remains after phones take their share is good enough to produce flourishing.</p>
+            
+            <p>The therapeutic research is clear: activity produces wellbeing. The developmental research is clear: play builds capability. The economic research is clear: non-cognitive skills have never been more valuable. And the time-use data, for all its messiness, points clearly in one direction: the activities that build these things are in decline.</p>
+            
+            <p>We don't need to prove that screens are harmful. We need to prove that the alternative is better—and then help teenagers actually live it.</p>
             
             
             <!-- FOOTNOTES -->
             <div class="footnotes">
                 <h4>Notes & Sources</h4>
                 <ol>
-                    <li>Yuval Levin, "The Changing Face of Social Breakdown," National Affairs, Fall 2024.</li>
-                    <li>All ATUS 2024 data from Bureau of Labor Statistics news release USDL-25-1060, June 26, 2025. Tables 3, 11A, and 11B provide primary activity breakdowns by age. The 15–19 age bracket is the narrowest teen-specific grouping available.</li>
                     <li>Derek Thompson, "Why Americans Stopped Hanging Out," The Atlantic, February 2024, citing ATUS data showing 45% decline for teenagers aged 15–19 from 2003–2022.</li>
-                    <li>Jean Twenge et al., "Worldwide increases in adolescent loneliness," Journal of Adolescence, 2021. Monitoring the Future data cited in multiple publications by Twenge.</li>
-                    <li>Jean Twenge, "Have Smartphones Destroyed a Generation?" The Atlantic, September 2017; updated data from Monitoring the Future surveys.</li>
-                    <li>David Zendle et al., "No evidence that Chinese playtime mandates reduced heavy gaming in children," Nature Human Behaviour, 2024.</li>
+                    <li>Bone et al., "The decline in reading for pleasure in the US: Analyses of 20 years of the American Time Use Survey," iScience, August 2025. Jean Twenge, Monitoring the Future data, multiple publications.</li>
+                    <li>CDC Youth Risk Behavior Survey, 2023. Sleep researchers including Matthew Walker have documented connections between smartphone use and sleep disruption.</li>
+                    <li>Bureau of Labor Statistics, teen labor force participation rates, 2000–2024.</li>
+                    <li>Aspen Institute Project Play, "State of Play 2025."</li>
+                    <li>David Deming, "The Growing Importance of Social Skills in the Labor Market," Quarterly Journal of Economics, 2017.</li>
+                    <li>The Hamilton Project, "Seven Facts on Noncognitive Skills," citing Deming (2015) and Weinberger (2014).</li>
+                    <li>Cuijpers et al., "Behavioral activation treatments of depression: a meta-analysis," Clinical Psychology Review, 2007.</li>
+                    <li>Camilo Ortiz and Matthew Fastman, "Independence Therapy," Journal of Anxiety Disorders, 2024. Interview with Jonathan Haidt, After Babel, July 2024.</li>
+                    <li>Zendle et al., "No evidence that Chinese playtime mandates reduced heavy gaming," Nature Human Behaviour, 2024.</li>
+                    <li>Yuval Levin, "The Changing Face of Social Breakdown," National Affairs, Fall 2024.</li>
                 </ol>
                 
                 <h4 style="margin-top: 32px;">Additional Sources</h4>
-                <p>Pew Research Center, "Teens, Social Media and Technology 2024," December 12, 2024. Survey of 1,391 U.S. teens conducted September–October 2024.</p>
+                <p>Bureau of Labor Statistics, American Time Use Survey 2024, Tables 3, 11A, 11B.</p>
+                <p>Pew Research Center, "Teens, Social Media and Technology 2024," December 2024.</p>
                 <p>Gallup, "Teens Spend Average of 4.8 Hours on Social Media Per Day," October 2023.</p>
-                <p>Aspen Institute Project Play, "State of Play 2025," participation data from Sports & Fitness Industry Association.</p>
-                <p>National Endowment for the Arts, "Federal Data on Reading for Pleasure," 2024, citing ATUS, NAEP, and SPPA data.</p>
-                <p>Bone et al., "The decline in reading for pleasure in the US: Analyses of 20 years of the American Time Use Survey," iScience, August 2025.</p>
-                <p>Jonathan Haidt, The Anxious Generation: How the Great Rewiring of Childhood Is Causing an Epidemic of Mental Illness (Penguin Press, 2024).</p>
-                <p>Mike Goldstein, "Helping Students Flourish, Not Just Achieve," interview with Robert Pondiscio, Thomas B. Fordham Institute / American Enterprise Institute, December 4, 2025.</p>
+                <p>Jonathan Haidt, The Anxious Generation (Penguin Press, 2024).</p>
+                <p>Mike Goldstein interview with Robert Pondiscio, Thomas B. Fordham Institute / AEI, December 2025.</p>
             </div>
         </main>
         
         <footer>
             <p><strong>Center for Teen Flourishing</strong></p>
-            <p>A venture studio supporting social entrepreneurs<br>working on teen wellbeing during the 3pm–3am hours</p>
+            <p>An R&D lab for the 3pm–3am hours</p>
             <p style="margin-top: 24px; font-family: 'JetBrains Mono', monospace; font-size: 12px;">© 2026 Center for Teen Flourishing</p>
         </footer>
     </div>
