@@ -124,54 +124,6 @@
             margin-bottom: 32px;
         }
         
-        .big-number {
-            text-align: center;
-            padding: 48px 24px;
-            margin: 40px 0;
-            background: var(--highlight);
-            border-radius: 4px;
-        }
-        
-        .big-number .number {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 72px;
-            font-weight: 500;
-            color: var(--accent);
-            line-height: 1;
-        }
-        
-        .big-number .label {
-            font-size: 18px;
-            color: var(--muted);
-            margin-top: 12px;
-        }
-        
-        .stat-row {
-            display: flex;
-            justify-content: space-around;
-            padding: 40px 0;
-            margin: 40px 0;
-            border-top: 1px solid var(--rule);
-            border-bottom: 1px solid var(--rule);
-        }
-        
-        .stat {
-            text-align: center;
-        }
-        
-        .stat .value {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 36px;
-            font-weight: 500;
-            color: var(--ink);
-        }
-        
-        .stat .desc {
-            font-size: 14px;
-            color: var(--muted);
-            margin-top: 4px;
-        }
-        
         blockquote {
             margin: 40px 0;
             padding: 24px 32px;
@@ -221,24 +173,6 @@
         .numeric {
             font-family: 'JetBrains Mono', monospace;
             text-align: right;
-        }
-        
-        .method-box {
-            background: #f5f5f3;
-            padding: 28px 32px;
-            margin: 40px 0;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        
-        .method-box h5 {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 12px;
         }
         
         .chart-container {
@@ -294,24 +228,12 @@
         .bar {
             height: 100%;
             border-radius: 2px;
-            transition: width 0.5s ease;
         }
         
-        .bar.primary {
-            background: var(--accent);
-        }
-        
-        .bar.secondary {
-            background: #2d5a7b;
-        }
-        
-        .bar.tertiary {
-            background: #6b9b7a;
-        }
-        
-        .bar.muted {
-            background: #999;
-        }
+        .bar.primary { background: var(--accent); }
+        .bar.secondary { background: #2d5a7b; }
+        .bar.tertiary { background: #6b9b7a; }
+        .bar.muted { background: #999; }
         
         .bar-value {
             font-family: 'JetBrains Mono', monospace;
@@ -408,15 +330,6 @@
             margin-bottom: 16px;
         }
         
-        .portrait-box ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        
-        .portrait-box li {
-            margin-bottom: 8px;
-        }
-        
         .vignette-box {
             background: #f0f5f0;
             border-left: 3px solid #6b9b7a;
@@ -474,13 +387,6 @@
             margin-bottom: 8px;
         }
         
-        .footnotes li:target {
-            background: var(--highlight);
-            padding: 4px 8px;
-            margin-left: -8px;
-            border-radius: 2px;
-        }
-        
         footer {
             margin-top: 80px;
             padding: 48px 0;
@@ -494,18 +400,8 @@
         }
         
         @media (max-width: 600px) {
-            h1 {
-                font-size: 36px;
-            }
-            
-            .stat-row {
-                flex-direction: column;
-                gap: 24px;
-            }
-            
-            .bar-label {
-                width: 100px;
-            }
+            h1 { font-size: 36px; }
+            .bar-label { width: 100px; }
         }
     </style>
 </head>
@@ -520,27 +416,27 @@
         </header>
         
         <main>
-            <p class="lead">Something is amiss with American teenagers. More of them are languishing: going through the motions, filling their days, yet somehow disengaged from the texture of their own lives.</p>
+            <p class="lead">Everyone has a theory about what's wrong with American teenagers. We're asking a different question, one that seems to get less attention: how do we get them to engage more with life? And we mean that concretely. The physical world, other people, activities that require showing up.</p>
             
-            <p>This report is about what teenagers do with their time from 3pm to 3am: the hours when school ends and autonomy begins. We think what happens in these hours is enormously consequential for wellbeing, development, and life outcomes. And we think the evidence that something has changed in how teenagers spend them is robust.</p>
+            <p>This report is about what teenagers do with their time from 3pm to 3am: the hours when school ends and autonomy begins. We think what happens in these hours shapes wellbeing, development, and life outcomes. And we think the evidence that something has changed in how teenagers spend them is robust.</p>
             
-            <p>Why "3pm to 3am"? Because discretionary time has expanded at both ends. School governs the morning. But teenagers are also falling asleep later: in 2023, only 23% of high school students got eight or more hours of sleep on school nights, down from 32% a decade earlier.<sup><a href="#fn9">9</a></sup> The window is wider than it used to be. What fills it is consequential.</p>
+            <p>Why "3pm to 3am"? Because discretionary time has expanded at both ends. School governs the morning. But teenagers are also falling asleep later: in 2023, only 23% of high school students got eight or more hours of sleep on school nights, down from 32% a decade earlier.<sup><a href="#fn1">1</a></sup> The window is wider than it used to be.</p>
             
-            <p>The public conversation has focused on screens: how much time on phones, whether social media causes depression, whether to ban TikTok. We find the evidence on displacement more compelling than the evidence on direct mental health effects. Teenagers are spending dramatically less time with friends in person, less time reading, less time working, less time playing sports, and less time sleeping. Multiple data sources, using different methodologies, point in the same direction. Whether screens are the cause or merely coincident, these declines are real.</p>
+            <p>The public conversation has focused on screens: how much time on phones, whether social media causes depression, whether to ban TikTok. We find the evidence on displacement more compelling than the evidence on direct mental health effects. Teenagers are spending less time with friends in person, less time reading, less time working, less time playing sports, and less time sleeping. Multiple data sources, using different methodologies, point in the same direction. Whether screens are the cause or merely coincident, these declines are real.</p>
             
-            <p>We call this the <strong>substitution hypothesis</strong>. The path forward may lie in substituting something better in place of screens. As Ross Douthat recently observed, many of us who worry about digital displacement spend our days "perpetually talking, talking, talking … when the necessary thing is to go out into reality and do."<sup><a href="#fn0">0</a></sup></p>
+            <p>We call this the <strong>substitution hypothesis</strong>. The path forward may lie in substituting something better in place of screens. As Ross Douthat recently observed, many of us who worry about digital displacement spend our days "perpetually talking, talking, talking … when the necessary thing is to go out into reality and do."<sup><a href="#fn2">2</a></sup></p>
             
-            <p>We take this seriously. The substitution hypothesis is not new. What may be new is taking seriously the implementation question: how do you actually get teenagers doing more? We know, roughly, what activities appear to be good for young people. We know those activities are declining. The harder question is activation: what gets a languishing teenager off the couch and into the world? This report is oriented toward that question.</p>
+            <p>The substitution hypothesis is not new. What may be new is taking seriously the implementation question: how do you actually get teenagers doing more? We know, roughly, what activities appear to be good for young people. We know those activities are declining. The harder question is activation: what gets a languishing teenager off the couch and into the world? This report is oriented toward that question.</p>
             
             
             <!-- SECTION I: THE DATA PROBLEM -->
             <h2>I. The Data Problem</h2>
             
-            <p>Much of the academic debate on teen screen time and wellbeing turns on methodological disputes. Researchers are often asking slightly different questions, measuring different things, and reaching conclusions that sound contradictory but may simply reflect different lenses on the same reality. Claims get overstated in popular accounts. Counterclaims get overstated in response. It can be hard to make sense of.</p>
+            <p>The research on teen wellbeing is a complicated picture. Data sources conflict. Methodologies come into dispute. One study finds large effects; another finds none; a third finds effects only for certain subgroups.</p>
             
-            <p>We want to be cautious on both sides: neither dismissing concerns about teen wellbeing nor accepting dramatic claims without scrutiny. Here is what we think we know, what remains contested, and where the evidence is genuinely thin.</p>
+            <p>That said, when we step back, certain trends emerge. Declines in time spent with friends. Declines in reading. Rising rates of reported anxiety and depression. These patterns show up across multiple data sources using different methods. The trends are real, even if the causal stories remain contested.</p>
             
-            <p>Take, for example, the screen question. How much time do teenagers spend on screens, or on social media, or watching TV? It depends who you ask and what exactly they're measuring.</p>
+            <p>The screen time debate is a good example of this complexity. How much time do teenagers spend on screens, or on social media, or watching TV? It depends who you ask and what exactly they're measuring.</p>
             
             <div class="problem-box">
                 <h5>Three answers to slightly different questions</h5>
@@ -556,26 +452,26 @@
                         <tr>
                             <td><strong>ATUS</strong> (BLS, 2024)</td>
                             <td>"Games and computer for leisure" as primary activity</td>
-                            <td class="numeric">1.3 hrs<sup><a href="#fn1">1</a></sup></td>
+                            <td class="numeric">1.3 hrs<sup><a href="#fn3">3</a></sup></td>
                         </tr>
                         <tr>
                             <td><strong>Gallup</strong> (2023)</td>
                             <td>"How much time on social media?"</td>
-                            <td class="numeric">4.8 hrs<sup><a href="#fn2">2</a></sup></td>
+                            <td class="numeric">4.8 hrs<sup><a href="#fn4">4</a></sup></td>
                         </tr>
                         <tr>
                             <td><strong>Common Sense Media</strong> (2021)</td>
                             <td>Total screen entertainment (estimated)</td>
-                            <td class="numeric">8.4 hrs<sup><a href="#fn3">3</a></sup></td>
+                            <td class="numeric">8.4 hrs<sup><a href="#fn5">5</a></sup></td>
                         </tr>
                     </tbody>
                 </table>
                 <p style="margin-top: 16px; margin-bottom: 0; font-size: 15px;">These numbers differ by a factor of six. Each measures something slightly different. Yet each is cited authoritatively in policy debates.</p>
             </div>
             
-            <p>The American Time Use Survey (ATUS), conducted by the Bureau of Labor Statistics, is the gold standard for time-use research. It asks people to walk through their previous day minute by minute, recording what they were <em>primarily</em> doing at each moment. This methodology captures focused activity but undercounts multitasking.<sup><a href="#fn4">4</a></sup> If you're scrolling your phone while watching TV, only one gets recorded.</p>
+            <p>The American Time Use Survey (ATUS), conducted by the Bureau of Labor Statistics, is the gold standard for time-use research. It asks people to walk through their previous day minute by minute, recording what they were <em>primarily</em> doing at each moment. This methodology captures focused activity but undercounts multitasking.<sup><a href="#fn6">6</a></sup> If you're scrolling your phone while watching TV, only one gets recorded.</p>
             
-            <p>Surveys like Gallup's ask teens to estimate their total time on social media. We suspect this overcounts: attention feels like time, and background scrolling gets lumped with focused use. (Though we haven't found rigorous research confirming this intuition.)</p>
+            <p>Surveys like Gallup's ask teens to estimate their total time on social media. We suspect this overcounts: attention feels like time, and background scrolling gets lumped with focused use.</p>
             
             <p>Neither approach is wrong. They are measuring different things. The gap between them makes it hard to use any single headline number for policy purposes.</p>
             
@@ -619,12 +515,6 @@
                             <td class="numeric">2%</td>
                         </tr>
                         <tr>
-                            <td>Mosquera et al., 2019</td>
-                            <td>Off Facebook 1 week</td>
-                            <td>Depression</td>
-                            <td class="numeric">8%</td>
-                        </tr>
-                        <tr>
                             <td>Lambert et al., 2022</td>
                             <td>Break from social media 1 week</td>
                             <td>Depression (PHQ-8)</td>
@@ -636,36 +526,16 @@
                             <td>Anxiety (GAD-7)</td>
                             <td class="numeric">8%</td>
                         </tr>
-                        <tr>
-                            <td>Faulhaber et al., 2023</td>
-                            <td>Self-monitored limits</td>
-                            <td>Depression</td>
-                            <td class="numeric">9%</td>
-                        </tr>
-                        <tr>
-                            <td>Arceneaux et al., 2024</td>
-                            <td>Deactivate Facebook (meta)</td>
-                            <td>Subjective wellbeing</td>
-                            <td class="numeric">~3%</td>
-                        </tr>
-                        <tr>
-                            <td>Schmidt-Persson et al., 2024</td>
-                            <td>Screen time reduction</td>
-                            <td>SDQ behavioral</td>
-                            <td class="numeric">4%</td>
-                        </tr>
                     </tbody>
                 </table>
-                <p class="chart-source">Effect sizes expressed as percentage of total scale range. A 3% effect on a 1-10 scale equals about +0.3 points.</p>
+                <p class="chart-source">Effect sizes expressed as percentage of total scale range.<sup><a href="#fn7">7</a></sup></p>
             </div>
             
-            <p>What does a 3 percent improvement in wellbeing mean? On a standard 1 to 7 scale, it is about 0.2 points. In percentile terms, a 0.05 standard deviation effect moves someone from the 50th percentile to roughly the 52nd. These are statistically significant effects. They are also small enough to be consistent with many explanations, including reverse causation (unhappy people may use more social media) or confounding (something else may cause both).</p>
+            <p>What does a 3 percent improvement in wellbeing mean? On a standard 1 to 7 scale, it is about 0.2 points. These are statistically significant effects. They are also small enough to be consistent with many explanations, including reverse causation or confounding.</p>
             
-            <p>The one outlier in this table, Hunt et al. (2018), found a larger effect: depression scores dropped from 23 to 14.5 on the Beck Depression Inventory, about 14 percent of the scale. This study is frequently cited, but it is also small (143 participants) and has been criticized on methodological grounds.</p>
+            <p>We are observing that these effects are modest, that reasonable researchers disagree about their interpretation, and that the research base does not clearly support the strong claims sometimes made in popular accounts.<sup><a href="#fn8">8</a></sup> Critics like Candice Odgers have noted that "hundreds of researchers have searched for the kind of large effects suggested" by screen-time alarmists, producing "a mix of no, small and mixed associations."</p>
             
-            <p>We are observing that these effects are modest, that reasonable researchers disagree about their interpretation, and that the research base does not clearly support the strong claims sometimes made in popular accounts.<sup><a href="#fn1a">1a</a></sup> Critics like Candice Odgers have noted that "hundreds of researchers have searched for the kind of large effects suggested" by screen-time alarmists, producing "a mix of no, small and mixed associations."</p>
-            
-            <p>Tyler Cowen, the economist, offers an even sharper dissent. In a contentious interview with Haidt, Cowen argued that the young people he works with through his Emergent Ventures program are "smarter, more dynamic, probably more productive than any other scientific generation ever, and that's because of social media." He suggests that the mental health trends may reflect an "exogenous mood shift" in the Anglosphere rather than social media harm, noting that most of the world appears unaffected. The effect sizes in the studies, Cowen observes, are "very, very, very small."<sup><a href="#fn1b">1b</a></sup></p>
+            <p>Tyler Cowen, the economist, offers an even sharper dissent. In a contentious interview with Haidt, Cowen argued that the young people he works with through his Emergent Ventures program are "smarter, more dynamic, probably more productive than any other scientific generation ever, and that's because of social media." He suggests that the mental health trends may reflect an "exogenous mood shift" in the Anglosphere rather than social media harm, noting that most of the world appears unaffected.<sup><a href="#fn9">9</a></sup></p>
             
             <p>We find ourselves somewhere between Haidt and Cowen. The displacement trends documented in this report are real. The causal story linking screens to mental illness is weaker than often claimed.</p>
             
@@ -673,13 +543,13 @@
             <!-- SECTION II: WHAT WE KNOW DIRECTIONALLY -->
             <h2>II. What We Know Directionally</h2>
             
-            <p>Even with messy data, certain trends are clear enough to trust. Multiple sources, using different methodologies, point in the same direction. Something has changed in how teenagers spend the 3pm–3am hours.</p>
+            <p>Even with messy data, certain trends are clear enough to trust. Multiple sources, using different methodologies, point in the same direction. Something has changed in how teenagers spend the 3pm to 3am hours.</p>
             
             <h3>Time with friends: the clearest signal</h3>
             
-            <p>ATUS data shows that Americans aged 15 to 19 now spend about <span class="inline-stat">one-third</span> of the time socializing with friends compared to twenty years ago: a 45% decline since 2003.<sup><a href="#fn5">5</a></sup> In 2024, for the first time in the survey's history, adults over 50 spent slightly more time socializing in person than teenagers did.</p>
+            <p>ATUS data shows that Americans aged 15 to 19 now spend about <span class="inline-stat">one-third</span> of the time socializing with friends compared to twenty years ago: a 45% decline since 2003.<sup><a href="#fn10">10</a></sup> In 2024, for the first time in the survey's history, adults over 50 spent slightly more time socializing in person than teenagers did.</p>
             
-            <p>The Monitoring the Future survey, which has tracked high school seniors since the 1970s, tells the same story with more texture:</p>
+            <p>The Monitoring the Future survey, which has tracked high school seniors since the 1970s, tells the same story:</p>
             
             <div class="chart-container">
                 <div class="chart-title">12th Graders Who Meet Friends "Almost Daily"</div>
@@ -706,92 +576,23 @@
                         <span class="bar-value">32%</span>
                     </div>
                 </div>
-                <p class="chart-source">Source: Monitoring the Future, University of Michigan<sup><a href="#fn6">6</a></sup></p>
+                <p class="chart-source">Source: Monitoring the Future, University of Michigan<sup><a href="#fn11">11</a></sup></p>
             </div>
             
-            <p>The decline was gradual from the 1970s through 2010: about a point every four years. Then it accelerated sharply. By 2022, 12th graders spent substantially less time on in-person social interaction than their Gen X predecessors.</p>
-            
-            <blockquote>
-                "Going to the mall has gone down. Driving in the car for fun has gone down. Going to the movies has gone down. We're talking about kids who are spending five, six, seven hours a day on social media."
-                <cite>— Jean Twenge, San Diego State University</cite>
-            </blockquote>
-            
-            <p>The timing is notable. The inflection point, 2010 to 2012, coincides with smartphone adoption crossing 50% among teenagers and the rise of Instagram and Snapchat.</p>
+            <p>The decline was gradual from the 1970s through 2010: about a point every four years. Then it accelerated sharply. The timing is notable. The inflection point, 2010 to 2012, coincides with smartphone adoption crossing 50% among teenagers and the rise of Instagram and Snapchat.</p>
             
             <h3>Other displacement effects</h3>
             
-            <p>The decline in socializing is the clearest trend, but not the only one:</p>
+            <p><strong>Reading:</strong> ATUS shows 15 to 19 year olds read for pleasure an average of 9 minutes per day. A University of Florida study found daily reading has declined 40% over twenty years.<sup><a href="#fn12">12</a></sup> In the late 1970s, 60% of 12th graders read a book or magazine almost daily; by 2016, that figure was 16%.</p>
             
-            <p><strong>Reading:</strong> ATUS shows 15 to 19 year olds read for pleasure an average of 9 minutes per day. We cannot say with certainty how much of that decline reflects substitution toward other media, but pleasure reading by all accounts is down substantially. A University of Florida study found daily reading has declined 40% over twenty years, about 3% annually.<sup><a href="#fn7">7</a></sup> In the late 1970s, 60% of 12th graders read a book or magazine almost daily; by 2016, that figure was 16%. High school teachers report anecdotally, in a growing body of think pieces (most recently in The Atlantic<sup><a href="#fn8">8</a></sup>), that students are struggling with sustained attention.</p>
+            <p><strong>Sleep:</strong> The CDC Youth Risk Behavior Survey found that only 23% of high school students got the recommended 8+ hours on school nights in 2023, down from 32% in 2013.<sup><a href="#fn1">1</a></sup></p>
             
-            <p><strong>Sleep:</strong> The CDC Youth Risk Behavior Survey found that only 23% of high school students got the recommended 8+ hours on school nights in 2023, down from 32% in 2013.<sup><a href="#fn9">9</a></sup> Evening phone use is frequently cited as a contributing factor.</p>
+            <p><strong>Part-time work:</strong> Teen labor force participation has declined from 52% in 2000 to 37% today.<sup><a href="#fn13">13</a></sup></p>
             
-            <p><strong>Part-time work:</strong> Teen labor force participation has declined from 52% in 2000 to 37% today. Some of this reflects economic shifts, but the steepest drops came after 2010.<sup><a href="#fn10">10</a></sup></p>
-            
-            <p><strong>Sports participation (boys):</strong> While overall youth sports rebounded post-pandemic, regular participation among boys fell from 50% in 2013 to 41% in 2023. Teen participation (ages 13 to 17) dropped another 3% in 2024.<sup><a href="#fn11">11</a></sup></p>
+            <p><strong>Sports participation (boys):</strong> Regular participation among boys fell from 50% in 2013 to 41% in 2023.<sup><a href="#fn14">14</a></sup></p>
             
             <div class="emphasis-box">
-                <p><strong>The directional truth:</strong> Regardless of the exact screen time number, teenagers are spending substantially less time with friends in person, less time reading, less time sleeping, less time working, and (for boys) less time in sports than they did fifteen years ago. These are the activities being displaced. This is what we should be measuring.</p>
-            </div>
-            
-            <div class="chart-container">
-                <div class="chart-title">Trends in Teen Activity, 2003 to 2024</div>
-                <table style="width: 100%; font-size: 15px;">
-                    <thead>
-                        <tr>
-                            <th style="width: 30%;">Activity</th>
-                            <th style="width: 20%;">Then</th>
-                            <th style="width: 20%;">Now</th>
-                            <th style="width: 15%;">Change</th>
-                            <th style="width: 15%;">Source</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Time socializing (ages 15 to 19)</td>
-                            <td class="numeric">~1.5 hrs/day</td>
-                            <td class="numeric">~50 min/day</td>
-                            <td class="numeric" style="color: var(--accent);">−45%</td>
-                            <td>ATUS</td>
-                        </tr>
-                        <tr>
-                            <td>12th graders meeting friends daily</td>
-                            <td class="numeric">52% (1970s)</td>
-                            <td class="numeric">32% (2022)</td>
-                            <td class="numeric" style="color: var(--accent);">−38%</td>
-                            <td>MTF</td>
-                        </tr>
-                        <tr>
-                            <td>Daily pleasure reading</td>
-                            <td class="numeric">60% (1970s)</td>
-                            <td class="numeric">16% (2016)</td>
-                            <td class="numeric" style="color: var(--accent);">−73%</td>
-                            <td>MTF</td>
-                        </tr>
-                        <tr>
-                            <td>Sleep 8+ hours (school nights)</td>
-                            <td class="numeric">32% (2013)</td>
-                            <td class="numeric">23% (2023)</td>
-                            <td class="numeric" style="color: var(--accent);">−28%</td>
-                            <td>CDC YRBS</td>
-                        </tr>
-                        <tr>
-                            <td>Teen labor force participation</td>
-                            <td class="numeric">52% (2000)</td>
-                            <td class="numeric">37% (2024)</td>
-                            <td class="numeric" style="color: var(--accent);">−29%</td>
-                            <td>BLS</td>
-                        </tr>
-                        <tr>
-                            <td>Boys in regular sports</td>
-                            <td class="numeric">50% (2013)</td>
-                            <td class="numeric">41% (2023)</td>
-                            <td class="numeric" style="color: var(--accent);">−18%</td>
-                            <td>Aspen</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p class="chart-source">Sources: American Time Use Survey (ATUS), Monitoring the Future (MTF), CDC Youth Risk Behavior Survey (YRBS), Bureau of Labor Statistics (BLS), Aspen Institute State of Play</p>
+                <p><strong>The directional truth:</strong> Regardless of the exact screen time number, teenagers are spending less time with friends in person, less time reading, less time sleeping, less time working, and (for boys) less time in sports than they did fifteen years ago. These are the activities being displaced. This is what we should be measuring.</p>
             </div>
             
             
@@ -802,74 +603,31 @@
             
             <h3>The labor market case</h3>
             
-            <p>Economists have documented a dramatic shift in what the labor market rewards. Research from Harvard's David Deming shows that since 1980, jobs requiring high levels of social skills have grown substantially, while jobs requiring only cognitive skills have shrunk.<sup><a href="#fn12">12</a></sup></p>
+            <p>Economists have documented a shift in what the labor market rewards. Research from Harvard's David Deming shows that since 1980, jobs requiring high levels of social skills have grown substantially, while jobs requiring only cognitive skills have shrunk.<sup><a href="#fn15">15</a></sup> A 2024 study by Kim and Kwon, using data from two generations of young workers, confirms the pattern continues: the wage premium for social skills has grown across education levels.<sup><a href="#fn16">16</a></sup></p>
             
-            <div class="chart-container">
-                <div class="chart-title">Change in U.S. Job Share by Skill Type, 1980 to 2012</div>
-                <div class="bar-chart">
-                    <div class="bar-row">
-                        <span class="bar-label">High social skills</span>
-                        <div class="bar-container">
-                            <div class="bar tertiary" style="width: 80%"></div>
-                        </div>
-                        <span class="bar-value">+12 pts</span>
+            <div class="chart-container" style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); border: none;">
+                <div class="chart-title" style="color: #fff;">The Divergence: Social vs. Cognitive Skills</div>
+                <p style="font-size: 14px; color: #999; margin-bottom: 32px;">Return on skills in the labor market, 1980s cohort vs. 1960s cohort</p>
+                
+                <div style="display: flex; gap: 24px; align-items: stretch;">
+                    <div style="flex: 1; background: linear-gradient(180deg, #4a7c59 0%, #2d5a3d 100%); border-radius: 8px; padding: 32px; text-align: center;">
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 64px; font-weight: 500; color: #fff; line-height: 1;">5×</div>
+                        <div style="font-size: 14px; color: rgba(255,255,255,0.8); margin-top: 8px; text-transform: uppercase; letter-spacing: 0.1em;">increase</div>
+                        <div style="width: 40px; height: 2px; background: rgba(255,255,255,0.3); margin: 16px auto;"></div>
+                        <div style="font-size: 18px; color: #fff; font-weight: 500;">Social Skills</div>
+                        <div style="font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 8px;">Effect on employment<br/>+0.5pp → +2.6pp</div>
                     </div>
-                    <div class="bar-row">
-                        <span class="bar-label">High math + social</span>
-                        <div class="bar-container">
-                            <div class="bar tertiary" style="width: 55%"></div>
-                        </div>
-                        <span class="bar-value">+8 pts</span>
-                    </div>
-                    <div class="bar-row">
-                        <span class="bar-label">High math, low social</span>
-                        <div class="bar-container">
-                            <div class="bar muted" style="width: 22%"></div>
-                        </div>
-                        <span class="bar-value">−3.3 pts</span>
+                    
+                    <div style="flex: 1; background: #3a3a3a; border-radius: 8px; padding: 32px; text-align: center;">
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 64px; font-weight: 500; color: #666; line-height: 1;">0×</div>
+                        <div style="font-size: 14px; color: #666; margin-top: 8px; text-transform: uppercase; letter-spacing: 0.1em;">change</div>
+                        <div style="width: 40px; height: 2px; background: #555; margin: 16px auto;"></div>
+                        <div style="font-size: 18px; color: #999; font-weight: 500;">Cognitive Skills</div>
+                        <div style="font-size: 13px; color: #666; margin-top: 8px;">Effect on employment<br/>+3.5pp → +3.5pp</div>
                     </div>
                 </div>
-                <p class="chart-source">Source: Deming, "The Growing Importance of Social Skills in the Labor Market," QJE 2017</p>
-            </div>
-            
-            <p>The Hamilton Project reports that social skills have become dramatically more important for employment outcomes. A one standard deviation increase in social skills now boosts full-time employment probability five times more than it did a generation ago, while the effect of cognitive skills has remained flat.<sup><a href="#fn13">13</a></sup></p>
-            
-            <div class="chart-container">
-                <div class="chart-title">Effect of Skills on Full-Time Employment (ages 25–33)</div>
-                <p style="font-size: 14px; color: var(--muted); margin-bottom: 20px;">How much does a one standard deviation increase in each skill type boost the probability of full-time employment?</p>
-                <div style="display: flex; gap: 48px; margin: 24px 0;">
-                    <div style="flex: 1;">
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 12px;">Social Skills</div>
-                        <div style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 8px;">
-                            <div>
-                                <div style="font-size: 13px; color: var(--muted);">1960s cohort</div>
-                                <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; color: #999;">+0.5<span style="font-size: 14px;">pp</span></div>
-                            </div>
-                            <div style="font-size: 24px; color: var(--muted);">→</div>
-                            <div>
-                                <div style="font-size: 13px; color: var(--muted);">1980s cohort</div>
-                                <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; color: var(--accent);">+2.6<span style="font-size: 14px;">pp</span></div>
-                            </div>
-                        </div>
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); font-weight: 500;">5× increase</div>
-                    </div>
-                    <div style="flex: 1;">
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); margin-bottom: 12px;">Cognitive Skills</div>
-                        <div style="display: flex; align-items: baseline; gap: 24px; margin-bottom: 8px;">
-                            <div>
-                                <div style="font-size: 13px; color: var(--muted);">1960s cohort</div>
-                                <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; color: #999;">+3.5<span style="font-size: 14px;">pp</span></div>
-                            </div>
-                            <div style="font-size: 24px; color: var(--muted);">→</div>
-                            <div>
-                                <div style="font-size: 13px; color: var(--muted);">1980s cohort</div>
-                                <div style="font-family: 'JetBrains Mono', monospace; font-size: 28px; color: #999;">+3.5<span style="font-size: 14px;">pp</span></div>
-                            </div>
-                        </div>
-                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--muted);">No change</div>
-                    </div>
-                </div>
-                <p class="chart-source">Source: Hamilton Project (2016), Figure 3B, citing Deming (2015). Social skills measured by extroversion; cognitive skills by AFQT scores.</p>
+                
+                <p class="chart-source" style="color: #666; margin-top: 24px;">Sources: Hamilton Project (2016); Kim & Kwon (2024). Social skills measured by extroversion; cognitive skills by AFQT.</p>
             </div>
             
             <p>We hypothesize that non-cognitive skills develop substantially in the 3pm to 3am hours: through part-time jobs, team sports, unstructured socializing, navigating independence, managing commitments, dealing with difficult people, recovering from failures. If those hours are increasingly spent on screens, we should expect the development of non-cognitive skills to suffer, at precisely the moment when the labor market is rewarding them more than ever.</p>
@@ -878,17 +636,15 @@
             
             <p>Clinical psychology offers a second line of evidence. Behavioral Activation (BA) is one of the most effective evidence-based treatments for depression. The core premise: increased engagement in meaningful activities leads to improved mood.</p>
             
-            <p>A 2023 meta-analysis of 22 randomized controlled trials found that individual behavioral activation produced effect sizes of g = 0.85 for depression, comparable to cognitive therapy and antidepressant medication.<sup><a href="#fn14">14</a></sup> The intervention is "relatively uncomplicated, time-efficient and does not require complex skills from patients or therapists."</p>
+            <p>A 2023 meta-analysis of 22 randomized controlled trials found that individual behavioral activation produced effect sizes of g = 0.85 for depression, comparable to cognitive therapy and antidepressant medication.<sup><a href="#fn17">17</a></sup></p>
             
-            <p>Related approaches in positive psychology emphasize a similar insight, sometimes summarized as "do more, feel better." The inverse is also true: decreased activity leads to worse mood, which leads to further withdrawal, creating a vicious cycle. This is precisely the pattern we see in languishing teenagers: not clinically depressed, but inactive, and the inactivity breeds low-grade malaise.</p>
+            <p>Related approaches in positive psychology emphasize a similar insight, sometimes summarized as "do more, feel better." The inverse is also true: decreased activity leads to worse mood, which leads to further withdrawal, creating a vicious cycle. This is the pattern we see in languishing teenagers: not clinically depressed, but inactive, and the inactivity breeds low-grade malaise.</p>
             
             <h3>Independence Therapy</h3>
             
-            <p>Camilo Ortiz, a clinical psychologist at Long Island University, has developed a related approach called "Independence Therapy." Working with clinically anxious children aged 9 to 14, he found that giving them "mega-doses of independence" (assignments to do new things on their own, without parents) reduced anxiety as effectively as traditional exposure therapy.<sup><a href="#fn15">15</a></sup></p>
+            <p>Camilo Ortiz, a clinical psychologist at Long Island University, has developed a related approach called "Independence Therapy." Working with clinically anxious children aged 9 to 14, he found that giving them "mega-doses of independence" (assignments to do new things on their own, without parents) reduced anxiety as effectively as traditional exposure therapy.<sup><a href="#fn18">18</a></sup></p>
             
             <p>As Ortiz explains: "When we do everything for them, we subtract all the uncertainty and then they suck at it. And then they're so anxious because you put them in any situation that has an element of uncertainty and they fall apart."</p>
-            
-            <p>One patient, a 9-year-old girl afraid to sleep in her own bed, was given assignments to take public transit alone, buy items at the store, and navigate small setbacks. During the final week of treatment, unprompted, she began sleeping in her own bed. She had never done this before.</p>
             
             <blockquote>
                 "Just as anxiety becomes generalized and everything becomes too dangerous and too scary, competence and confidence also generalize. Children's competence gives them confidence, and then the parents get it too, and they're spiraling up instead of spiraling down."
@@ -907,17 +663,15 @@
             
             <p>Play, especially unstructured, unsupervised play with peers, is how children have always developed social skills, risk assessment, emotional regulation, and resilience. The displacement of play by screens represents a disruption to a developmental process that mammals have relied on for hundreds of millions of years.</p>
             
-            <p>This is the developmental parallel to the economic and therapeutic arguments: real-world activity builds skills, confidence, and wellbeing. Screens, whatever their direct effects, displace the activities that produce these benefits.</p>
-            
             
             <!-- SECTION IV: THE SUBSTITUTION HYPOTHESIS -->
             <h2>IV. The Substitution Hypothesis</h2>
             
-            <p>If displacement is the problem, the solution may lie less in reducing screen time directly than in <em>substituting</em> something better in its place.</p>
+            <p>If displacement is the problem, the solution may lie in <em>substituting</em> something better in its place.</p>
             
             <h3>Why suppression alone may not be enough</h3>
             
-            <p>Efforts to restrict teen screen use have shown limited success outside of school. China has tried since 2019 with various restrictions, including video game time limits; a <em>Nature Human Behaviour</em> study found "no credible evidence" the tactics reduced gaming.<sup><a href="#fn16">16</a></sup> Britain's Online Safety Act took effect in July 2025; VPN signups surged by 1,400% within hours.<sup><a href="#fn17">17</a></sup> Parental controls (screen time limits, content filters) are widely available but rarely effective. The dynamic of a parent peering over a teenager's shoulder asking "Is that really homework?" is difficult to sustain.</p>
+            <p>Efforts to restrict teen screen use have shown limited success outside of school. China has tried since 2019 with various restrictions, including video game time limits; a <em>Nature Human Behaviour</em> study found "no credible evidence" the tactics reduced gaming.<sup><a href="#fn19">19</a></sup> Britain's Online Safety Act took effect in July 2025; VPN signups surged within hours.<sup><a href="#fn20">20</a></sup></p>
             
             <p>School phone bans during the 8am to 3pm hours have strong logic and growing evidence behind them. But from 3pm to 3am, when teens have more autonomy and parents have less control, suppression faces structural limits.</p>
             
@@ -927,18 +681,14 @@
             
             <h3>Towards a vision of flourishing</h3>
             
-            <p>Flourishing is a more holistic concept than happiness. Researchers like Corey Keyes, Tyler VanderWeele at Harvard, and Carol Ryff have done important work conceptualizing what it means.<sup><a href="#fn18">18</a></sup> But for our purposes, we want to be more operational. We are less interested in flourishing as a psychological state and more interested in the <em>activities</em> that appear to produce it.</p>
-            
             <p>Our working definition: flourishing activities are those that involve real-world engagement, skill development, and social connection. They share several features. They happen in physical space, with other people, and require showing up. They involve feedback loops: you try something, see what happens, adjust. They create stakes, however small: a shift to cover, a game to win, a friend expecting you. And they compound over time, building relationships, competencies, and identity.</p>
-            
-            <p>This definition is intentionally modest. We are claiming that certain activities are worth tracking because they are plausibly good, demonstrably declining, and potentially changeable. The hypothesis is that teenagers who spend more time on these activities will, on average, fare better. Testing that hypothesis is part of the work ahead.</p>
             
             <p>Flourishing teenagers tend to share a common pattern: busy calendars. Their out-of-school hours are filled with a portfolio of activities across multiple domains.</p>
             
             <div class="vignette-box">
                 <h5>A Week in the Life of Marcus, 16</h5>
                 <p>Marcus plays JV soccer. Practice is Tuesday and Thursday after school, 3:30 to 5:30. Games are Saturday mornings. He works the closing shift at a sandwich shop on Friday and Sunday evenings, usually 5 to 9. On Wednesdays he hangs out at his friend Dev's house; they play video games, but they're in the same room doing it. Monday is usually homework and decompression. He's in bed by 11 most nights, earlier before games.</p>
-                <p>This is roughly 15 hours of structured activity per week: 6 hours of soccer, 8 hours of work, plus the time with Dev. It's not heroic. It's just a full life. The soccer gives him teammates and a reason to stay in shape. The job gives him money and a sense of capability. Dev gives him friendship. The sleep gives him enough fuel to do it again.</p>
+                <p>This is roughly 15 hours of structured activity per week: 6 hours of soccer, 8 hours of work, plus the time with Dev. It's not heroic. It's just a full life.</p>
             </div>
             
             <p>Some teenagers build this portfolio through school activities: sports teams, theater, band, clubs. Others assemble it independently through community organizations, jobs, and informal networks. Both paths work. What counts is total engagement with the world: activities that require showing up, that create small stakes, that build relationships and competencies over time.</p>
@@ -983,20 +733,20 @@
                         <div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--accent); margin-top: 12px;">20.2 pt gap</div>
                     </div>
                 </div>
-                <p class="chart-source">Source: Aspen Institute State of Play 2025, based on Sports & Fitness Industry Association data</p>
+                <p class="chart-source">Source: Aspen Institute State of Play 2025<sup><a href="#fn14">14</a></sup></p>
             </div>
             
             <p>This complicates the substitution hypothesis. If the alternative activities are themselves stratified by income, then "substitute something better" risks becoming advice that only works for families who can afford club soccer, music lessons, and summer camps. Any serious agenda must grapple with access.</p>
             
             <p>There is another complication. The flourishing teen we have described (busy calendar, team sports, part-time job, lots of socializing) may reflect one temperament more than others. What about introverts? What about teens whose flourishing looks like deep reading, solitary creative work, or one-on-one friendships rather than group activities?</p>
             
-            <p>We do not think the answer is that introverts should become extroverts. Even introverted flourishing requires <em>some</em> real-world activity: the deep reader still needs sleep, the solitary artist still benefits from occasional collaboration, the one-on-one friend still needs that one friend to be physically present sometimes. All teens need some engagement with the physical world. Passive consumption (scrolling without creating, watching without doing) does not serve anyone's temperament well.</p>
+            <p>We do not think the answer is that introverts should become extroverts. Even introverted flourishing requires <em>some</em> real-world activity: the deep reader still needs sleep, the solitary artist still benefits from occasional collaboration, the one-on-one friend still needs that one friend to be physically present sometimes. Passive consumption (scrolling without creating, watching without doing) does not serve anyone's temperament well.</p>
             
             
-            <!-- SECTION V: WHAT WE NEED -->
+            <!-- SECTION V: AN AGENDA -->
             <h2>V. An Agenda</h2>
             
-            <p>If this analysis is right, the research and policy agenda should shift. We need less attention to screen time itself and more attention to what screens displace. Here is what that looks like concretely.</p>
+            <p>The Center for Teen Flourishing is pursuing a measurement agenda. The field has been held back by weak data and imprecise claims. We think we can help.</p>
             
             <h3>1. Understanding how teens actually spend their time</h3>
             
@@ -1046,50 +796,32 @@
                         <td>Very poor</td>
                         <td>No national measure</td>
                     </tr>
-                    <tr>
-                        <td>Volunteering</td>
-                        <td>Moderate</td>
-                        <td>ATUS tracks; low rates</td>
-                    </tr>
                 </tbody>
             </table>
             
-            <p>We are pursuing two complementary approaches. First, we are synthesizing existing data sources (ATUS, CDC YRBS, Monitoring the Future, Aspen State of Play, Common Sense Media) into a single picture of how American teenagers spend the 3pm to 3am hours, flagging where evidence is strong, where it conflicts, and where we are flying blind.</p>
+            <p>We are interested in figuring out whether it is possible to capture time-use data that people trust. We suspect yes. To test this, we will conduct structured time-use surveys with 5 randomly sampled teenagers, mapping their 3pm to 3am hours as precisely as we can. We will learn a lot about how not to do this. Then we will scale those learnings to 100 kids. We will follow the surveys with 15 in-depth interviews to understand the choices and barriers behind the numbers. This is primary data collection. We will publish the methodology and the data.</p>
             
-            <p>Second, we are conducting original research: structured time-use surveys with approximately 100 teenagers, followed by 10 to 15 in-depth interviews. The surveys will map activity patterns hour by hour. The interviews will surface what the numbers miss: why teens make the choices they do, what barriers they face, what they wish they were doing instead. The combination of breadth and depth should give us a richer picture than either approach alone.</p>
+            <h3>2. A national data synthesis</h3>
             
-            <h3>2. Commenting on the research</h3>
+            <p>We are pulling together existing sources (ATUS, CDC YRBS, Monitoring the Future, Aspen State of Play, Common Sense Media) into a single reference document on teen time use. Where sources conflict, we will say so and explain why. Where data is missing, we will flag the gaps. We want to usefully call out where the holes are, and create a resource that researchers and journalists can actually use.</p>
             
-            <p>The public debate on teen wellbeing is noisy. Claims and counterclaims get amplified. Methodological nuances get lost. We are producing analysis that engages seriously with the evidence, in the spirit of what Jonathan Haidt has done, but with more skepticism toward strong claims on all sides. When a study is overstated, we will say so. When the evidence is genuinely uncertain, we will say that too.</p>
+            <h3>3. Public commentary on the research</h3>
             
-            <h3>3. Testing activation interventions</h3>
+            <p>The debate on teen wellbeing can become tribal. We are producing analysis that engages seriously with the evidence and calls out overstatement on all sides. When a study is weaker than its headlines suggest, we will say so. When the evidence is genuinely uncertain, we will say that too. We think there is a lane for this kind of work: respectful, for example, of the claims of smartphone harm, while skeptical of many of the studies that support them.</p>
             
-            <p>We have reasonable evidence that certain activities are associated with flourishing. What we lack is evidence on <em>how to get languishing teenagers to do them</em>. The diagnosis is clearer than the prescription. The hard problem is activation.</p>
+            <h3>4. Testing activation interventions</h3>
+            
+            <p>We have reasonable evidence that certain activities are associated with flourishing. What we lack is evidence on how to get languishing teenagers to do them. The hard problem is activation.</p>
             
             <p>Consider the languishing teen: low energy, vague interests, going through the motions. They might benefit from a part-time job, or a sport, or more time with friends. But knowing that does not solve the problem. What actually gets them off the couch? What breaks the inertia?</p>
             
-            <p>We are partnering with researchers to test activation interventions adapted from clinical psychology. Behavioral activation (BA) is among the most effective treatments for depression, with effect sizes comparable to cognitive therapy. The mechanism: depression involves withdrawal from valued activities, reducing positive reinforcement, sustaining withdrawal. BA interrupts this cycle by mapping activity patterns, identifying barriers, and systematically scheduling engagement.</p>
+            <p>We plan to test activation coaching adapted from behavioral activation therapy. Provisionally, the study will randomize 90 students into three arms: coaching plus activity stipend, stipend only, and waitlist control. This design isolates the coaching mechanism from simple financial access. We will know whether coaching adds value beyond removing cost barriers.</p>
             
-            <p>Languishing shares this behavioral architecture. Adolescents who are languishing exhibit the withdrawal pattern even without meeting diagnostic thresholds, caught in a low-engagement equilibrium. Our hypothesis: a subclinical population may be responsive to BA-style coaching, especially when paired with practical support to overcome barriers.</p>
+            <h3>5. A flourishing hours framework</h3>
             
-            <p>The research questions are concrete:</p>
+            <p>We are developing a measurement tool where teens and parents independently estimate weekly hours in structured activities, and we correlate those estimates with self-reported wellbeing from both parties. The instrument will be piloted with partner organizations this spring. By fall 2026, we will have normative data on what different levels of activity hours correspond to in terms of teen and parent perceptions of wellbeing. This gives us a leading indicator we can track and intervene on.</p>
             
-            <ul style="margin: 20px 0 20px 24px;">
-                <li>Can non-clinical staff (coaches, advisors) deliver activation coaching effectively?</li>
-                <li>What are the primary barriers for languishing teens—financial costs, or the friction of finding activities, signing up, and sustaining participation?</li>
-                <li>Does coaching add value beyond simply removing financial barriers?</li>
-                <li>What do teens and coaches experience as helpful? What barriers prove hardest to address?</li>
-            </ul>
-            
-            <h3>4. A flourishing hours framework</h3>
-            
-            <p>We are developing a simple measurement approach: count the weekly hours teens spend in structured activities and developmental settings (organized sports, clubs, employment or volunteering up to 10 hours, arts programs, religious or civic participation, in-person peer time). Both the teen and a parent rate these hours independently.</p>
-            
-            <p>This dual rating is important. A teen who reports 15 hours of activity while their parent reports 5 has surfaced a gap worth exploring. A teen who reports 3 hours and a parent who also reports 3 has confirmed a baseline. The conversation between the two ratings is often where the useful information lives.</p>
-            
-            <p>We then correlate these activity hours with two other measures: the teen's self-reported sense of wellbeing, and the parent's perception of the teen's wellbeing. The hypothesis is straightforward: teens with more hours in structured activities will report higher wellbeing, and their parents will too. If that correlation holds, activity hours become a leading indicator—something you can observe and change, rather than waiting for wellbeing to decline.</p>
-            
-            <p>This is a practical framework for tracking whether teens are engaged with the world, and whether that engagement predicts how they (and their parents) feel about how things are going.</p>
+            <p>A teen who reports 15 hours of activity while their parent reports 5 has surfaced a gap worth exploring. A teen who reports 3 hours and a parent who also reports 3 has confirmed a baseline. The conversation between the two ratings is often where the useful information lives.</p>
             
             
             <!-- SECTION VI: CONCLUSION -->
@@ -1104,26 +836,6 @@
             
             <p>This portrait is recognizable to teachers, parents, and teenagers themselves. It captures something that does not fit neatly into clinical categories. These kids are not in crisis. They are languishing.</p>
             
-            <p>The screen time debate has been dominated by questions of harm. Harm may be the wrong frame. The question is whether the life that remains after phones take their share is good enough to produce flourishing.</p>
-            
-            <p>We know, roughly, what flourishing looks like. We know the activities that appear to produce it are declining. What we do not know is how to reverse that decline. How do you activate a languishing teenager? What gets them off the couch and into the world? This is an implementation problem. The diagnosis is reasonably clear. The prescription is not.</p>
-            
-            <p>The work ahead is to figure out what actually works. Not in theory. In practice. In specific communities, with specific teenagers, through specific programs that can be measured and improved. That is what CTF exists to do.</p>
-            
-            <h3>What CTF is doing</h3>
-            
-            <p>The Center for Teen Flourishing is pursuing a measurement agenda in 2026. The field has been held back by weak data and imprecise claims. We think we can help.</p>
-            
-            <p><strong>1. Original time-use research.</strong> We are interested in figuring out whether it is possible to capture time-use data that people trust. We suspect yes. To test this, we will conduct structured time-use surveys with 5 randomly sampled teenagers, mapping their 3pm to 3am hours as precisely as we can. We will learn a lot about how not to do this. Then we will scale those learnings to 100 kids. We will follow the surveys with 15 in-depth interviews to understand the choices and barriers behind the numbers. This is primary data collection. We will publish the methodology and the data.</p>
-            
-            <p><strong>2. A flourishing hours instrument.</strong> Related to the above: we are developing a measurement tool where teens and parents independently estimate weekly hours in structured activities, and we correlate those estimates with self-reported wellbeing from both parties. The instrument will be piloted with partner organizations this spring. By fall 2026, we will have normative data on what different levels of activity hours correspond to in terms of teen and parent perceptions of wellbeing. This gives us a leading indicator we can track and intervene on.</p>
-            
-            <p><strong>3. A national data synthesis.</strong> We are pulling together existing sources (ATUS, CDC YRBS, Monitoring the Future, Aspen State of Play, Common Sense Media) into a single reference document on teen time use. Where sources conflict, we will say so and explain why. Where data is missing, we will flag the gaps. We want to usefully call out where the holes are, and create a resource that researchers and journalists can actually use.</p>
-            
-            <p><strong>4. Public commentary on the research.</strong> The debate on teen wellbeing can become tribal. We are producing analysis that engages seriously with the evidence and calls out overstatement on all sides. When a study is weaker than its headlines suggest, we will say so. When the evidence is genuinely uncertain, we will say that too. We think there is a lane for this kind of work: respectful, for example, of the claims of smartphone harm, while skeptical of many of the studies that support them.</p>
-            
-            <p><strong>5. A pilot intervention study.</strong> This is our "stop talking and act" initiative. How do we get kids off the couch? We plan to test activation coaching adapted from behavioral activation therapy. Provisionally, the study will randomize 90 students into three arms: coaching plus activity stipend, stipend only, and waitlist control. This design isolates the coaching mechanism from simple financial access. We will know whether coaching adds value beyond removing cost barriers.</p>
-            
             <div class="chart-container">
                 <div class="chart-title">Two Versions of 3pm to 11pm</div>
                 <p style="font-size: 14px; color: var(--muted); margin-bottom: 28px;">How the same eight hours can look radically different</p>
@@ -1132,19 +844,19 @@
                         <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: #4a7c59; margin-bottom: 16px;">Flourishing</div>
                         <div style="display: flex; flex-direction: column; gap: 2px;">
                             <div style="height: 32px; background: #6b9b7a; border-radius: 2px 2px 0 0; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: white;">3:00 – 5:30 Soccer practice</span>
+                                <span style="font-size: 13px; color: white;">3:00 - 5:30 Soccer practice</span>
                             </div>
                             <div style="height: 24px; background: #8bb89a; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: white;">5:30 – 6:30 Dinner, downtime</span>
+                                <span style="font-size: 13px; color: white;">5:30 - 6:30 Dinner, downtime</span>
                             </div>
                             <div style="height: 28px; background: #2d5a7b; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: white;">6:30 – 8:00 Homework</span>
+                                <span style="font-size: 13px; color: white;">6:30 - 8:00 Homework</span>
                             </div>
                             <div style="height: 28px; background: #c44536; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: white;">8:00 – 9:30 At Dev's house</span>
+                                <span style="font-size: 13px; color: white;">8:00 - 9:30 At Dev's house</span>
                             </div>
                             <div style="height: 24px; background: #999; border-radius: 0 0 2px 2px; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: white;">9:30 – 11:00 Wind down, bed</span>
+                                <span style="font-size: 13px; color: white;">9:30 - 11:00 Wind down, bed</span>
                             </div>
                         </div>
                     </div>
@@ -1152,60 +864,64 @@
                         <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); margin-bottom: 16px;">Languishing</div>
                         <div style="display: flex; flex-direction: column; gap: 2px;">
                             <div style="height: 48px; background: #ddd; border-radius: 2px 2px 0 0; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: #666;">3:00 – 6:00 Phone, TV, snacks</span>
+                                <span style="font-size: 13px; color: #666;">3:00 - 6:00 Phone, TV, snacks</span>
                             </div>
                             <div style="height: 20px; background: #ccc; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: #666;">6:00 – 6:30 Dinner</span>
+                                <span style="font-size: 13px; color: #666;">6:00 - 6:30 Dinner</span>
                             </div>
                             <div style="height: 20px; background: #2d5a7b; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: white;">6:30 – 7:00 Some homework</span>
+                                <span style="font-size: 13px; color: white;">6:30 - 7:00 Some homework</span>
                             </div>
                             <div style="height: 60px; background: #ddd; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: #666;">7:00 – 11:00 Phone, gaming, YouTube</span>
+                                <span style="font-size: 13px; color: #666;">7:00 - 11:00 Phone, gaming, YouTube</span>
                             </div>
                             <div style="height: 20px; background: #bbb; border-radius: 0 0 2px 2px; display: flex; align-items: center; padding: 0 12px;">
-                                <span style="font-size: 13px; color: #666;">11:00 – ? Still scrolling</span>
+                                <span style="font-size: 13px; color: #666;">11:00 - ? Still scrolling</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <p class="chart-source" style="margin-top: 20px;">Illustrative composites based on interviews and time-use data. Neither is inherently good or bad; the question is which pattern the teen prefers and whether they can move toward it.</p>
+                <p class="chart-source" style="margin-top: 20px;">Illustrative composites based on interviews and time-use data.</p>
             </div>
+            
+            <p>We know, roughly, what flourishing looks like. We know the activities that appear to produce it are declining. What we do not know is how to reverse that decline. How do you activate a languishing teenager? What gets them off the couch and into the world?</p>
+            
+            <p>The work ahead is to figure out what actually works. In specific communities, with specific teenagers, through specific programs that can be measured and improved.</p>
             
             
             <!-- FOOTNOTES -->
             <div class="footnotes">
                 <h4>Notes & Sources</h4>
-                <p style="font-size: 14px; margin-bottom: 20px;">This report synthesizes evidence from government surveys (ATUS, CDC YRBS), peer-reviewed research, and policy reports. Where we rely on secondary analysis, we have attempted to trace claims to underlying data. Some trends (particularly around time with friends and reading) are robustly supported by multiple primary sources. Others rest on thinner evidence, and we have tried to signal uncertainty accordingly.</p>
+                <p style="font-size: 14px; margin-bottom: 20px;">This report synthesizes evidence from government surveys (ATUS, CDC YRBS), peer-reviewed research, and policy reports. Where we rely on secondary analysis, we have attempted to trace claims to underlying data.</p>
                 <ol>
-                    <li id="fn0">Ross Douthat, "An Age of Extinction Is Coming. Here's How to Survive," <em>New York Times</em>, April 19, 2025.</li>
-                    <li id="fn1a">Candice Odgers, review of <em>The Anxious Generation</em>, <em>Nature</em>, March 2024.</li>
-                    <li id="fn1b">Tyler Cowen, "Jonathan Haidt on Adjusting to Smartphones and Social Media," <em>Conversations with Tyler</em>, Episode 209, April 2024.</li>
-                    <li id="fn1c">Screen reduction studies cited in effect size table: Hunt et al. (2018), <em>Journal of Social and Clinical Psychology</em>; Allcott et al. (2020), <em>American Economic Review</em>; Mosquera et al. (2019), <em>Experimental Economics</em>; Lambert et al. (2022), <em>Cyberpsychology, Behavior, and Social Networking</em>; Faulhaber et al. (2023), <em>Technology, Mind, and Behavior</em>; Arceneaux et al. (2024), <em>Royal Society Open Science</em>; Schmidt-Persson et al. (2024), <em>JAMA Network Open</em>.</li>
-                    <li id="fn1">Bureau of Labor Statistics, American Time Use Survey 2024, Table 11A.</li>
-                    <li id="fn2">Gallup, "Teens Spend Average of 4.8 Hours on Social Media Per Day," October 2023.</li>
-                    <li id="fn3">Common Sense Media, "The Common Sense Census: Media Use by Tweens and Teens," 2021.</li>
-                    <li id="fn4">The BLS notes that ATUS records only the "primary activity" at each moment. For methodological discussion, see Hofferth, S. L. (2010), "Home media and children's achievement and behavior," <em>Child Development</em>, 81(5), 1598-1619.</li>
-                    <li id="fn5">American Time Use Survey, Bureau of Labor Statistics, 2003-2024. Analysis by Jean Twenge, "It's not just you: Americans are still not hanging out," Generation Tech Blog, September 2025.</li>
-                    <li id="fn6">Monitoring the Future survey, Institute for Social Research, University of Michigan, 1976-2022.</li>
-                    <li id="fn7">Bone et al., "The decline in reading for pleasure in the US: Analyses of 20 years of the American Time Use Survey," <em>iScience</em>, August 2025.</li>
-                    <li id="fn8">Rose Horowitch, "The Elite College Students Who Can't Read Books," <em>The Atlantic</em>, November 2024. Idrees Kahloon, "America Is Sliding Toward Illiteracy," <em>The Atlantic</em>, 2024.</li>
-                    <li id="fn9">CDC, Youth Risk Behavior Surveillance System, Data Summary & Trends Report 2013-2023.</li>
-                    <li id="fn10">Bureau of Labor Statistics, teen labor force participation rates, 2000-2024.</li>
-                    <li id="fn11">Aspen Institute Project Play, "State of Play 2025." Sports & Fitness Industry Association data.</li>
-                    <li id="fn12">Deming, D. (2017). "The Growing Importance of Social Skills in the Labor Market," <em>Quarterly Journal of Economics</em>, 132(4), 1593-1640.</li>
-                    <li id="fn13">Hamilton Project, "Seven Facts on Noncognitive Skills from Education to the Labor Market," October 2016. Based on Deming (2015), NBER Working Paper No. 21473.</li>
-                    <li id="fn14">Cuijpers, P. et al. (2023). "Individual behavioral activation in the treatment of depression: A meta-analysis," <em>Psychotherapy Research</em>, 33(4), 533-545.</li>
-                    <li id="fn15">Ortiz, C., & Fastman, M. (2024). A novel independence intervention to treat child anxiety: A nonconcurrent multiple baseline evaluation. <em>Journal of Anxiety Disorders</em>, 105, 102893.</li>
-                    <li id="fn16">Zendle, D. et al. (2024). "No evidence that Chinese playtime mandates reduced heavy gaming," <em>Nature Human Behaviour</em>.</li>
-                    <li id="fn17">Top10VPN traffic monitoring data, July 2025.</li>
-                    <li id="fn18">Keyes, C. L. M. (2002). "The mental health continuum: From languishing to flourishing in life," <em>Journal of Health and Social Behavior</em>, 43(2), 207-222. VanderWeele, T. J. (2017). "On the promotion of human flourishing," <em>PNAS</em>, 114(31), 8148-8156. Ryff, C. D. (1989). "Happiness is everything, or is it?" <em>Journal of Personality and Social Psychology</em>, 57(6), 1069-1081.</li>
+                    <li id="fn1">CDC, Youth Risk Behavior Surveillance System, Data Summary & Trends Report 2013-2023.</li>
+                    <li id="fn2">Douthat, R. (2025, April 19). "An Age of Extinction Is Coming. Here's How to Survive." <em>New York Times</em>.</li>
+                    <li id="fn3">Bureau of Labor Statistics, American Time Use Survey 2024, Table 11A.</li>
+                    <li id="fn4">Gallup. (2023). "Teens Spend Average of 4.8 Hours on Social Media Per Day."</li>
+                    <li id="fn5">Common Sense Media. (2021). "The Common Sense Census: Media Use by Tweens and Teens."</li>
+                    <li id="fn6">The BLS notes that ATUS records only the "primary activity" at each moment. For methodological discussion, see Hofferth, S. L. (2010), "Home media and children's achievement and behavior," <em>Child Development</em>, 81(5), 1598-1619.</li>
+                    <li id="fn7">Screen reduction studies: Hunt et al. (2018), <em>Journal of Social and Clinical Psychology</em>; Allcott et al. (2020), <em>American Economic Review</em>; Lambert et al. (2022), <em>Cyberpsychology, Behavior, and Social Networking</em>.</li>
+                    <li id="fn8">Odgers, C. (2024). Review of <em>The Anxious Generation</em>. <em>Nature</em>.</li>
+                    <li id="fn9">Cowen, T. (2024). "Jonathan Haidt on Adjusting to Smartphones and Social Media." <em>Conversations with Tyler</em>, Episode 209.</li>
+                    <li id="fn10">American Time Use Survey, Bureau of Labor Statistics, 2003-2024. Analysis by Twenge, J. (2025). "It's not just you: Americans are still not hanging out." Generation Tech Blog.</li>
+                    <li id="fn11">Monitoring the Future survey, Institute for Social Research, University of Michigan, 1976-2022.</li>
+                    <li id="fn12">Bone, J. et al. (2025). "The decline in reading for pleasure in the US: Analyses of 20 years of the American Time Use Survey." <em>iScience</em>. See also: Horowitch, R. (2024). "The Elite College Students Who Can't Read Books." <em>The Atlantic</em>.</li>
+                    <li id="fn13">Bureau of Labor Statistics, teen labor force participation rates, 2000-2024.</li>
+                    <li id="fn14">Aspen Institute Project Play. (2025). "State of Play 2025." Sports & Fitness Industry Association data.</li>
+                    <li id="fn15">Deming, D. (2017). "The Growing Importance of Social Skills in the Labor Market." <em>Quarterly Journal of Economics</em>, 132(4), 1593-1640.</li>
+                    <li id="fn16">Kim, S. H. & Kwon, D. (2024). "The Growing Importance of Social Skills for Labor Market Outcomes Across Education Groups." <em>The B.E. Journal of Economic Analysis & Policy</em>, 24(3), 847-878.</li>
+                    <li id="fn17">Cuijpers, P. et al. (2023). "Individual behavioral activation in the treatment of depression: A meta-analysis." <em>Psychotherapy Research</em>, 33(4), 533-545.</li>
+                    <li id="fn18">Ortiz, C. & Fastman, M. (2024). "A novel independence intervention to treat child anxiety: A nonconcurrent multiple baseline evaluation." <em>Journal of Anxiety Disorders</em>, 105, 102893.</li>
+                    <li id="fn19">Zendle, D. et al. (2024). "No evidence that Chinese playtime mandates reduced heavy gaming." <em>Nature Human Behaviour</em>.</li>
+                    <li id="fn20">Top10VPN traffic monitoring data, July 2025.</li>
                 </ol>
                 
                 <h4 style="margin-top: 32px;">Additional Sources</h4>
-                <p>Pew Research Center, "Teens, Social Media and Technology 2024," December 2024.</p>
+                <p>Pew Research Center. (2024). "Teens, Social Media and Technology 2024."</p>
                 <p>Haidt, J. (2024). <em>The Anxious Generation</em>. Penguin Press.</p>
                 <p>Goldstein, M. (2025). Interview with Robert Pondiscio. Thomas B. Fordham Institute.</p>
+                <p>Keyes, C. L. M. (2002). "The mental health continuum: From languishing to flourishing in life." <em>Journal of Health and Social Behavior</em>, 43(2), 207-222.</p>
+                <p>VanderWeele, T. J. (2017). "On the promotion of human flourishing." <em>PNAS</em>, 114(31), 8148-8156.</p>
             </div>
         </main>
         
