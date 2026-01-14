@@ -419,7 +419,7 @@
         
         .vignette-box {
             background: #f0f5f0;
-            border-left: 3px solid var(--tertiary);
+            border-left: 3px solid #6b9b7a;
             padding: 28px 32px;
             margin: 40px 0;
             border-radius: 0 4px 4px 0;
@@ -493,39 +493,6 @@
             color: var(--muted);
         }
         
-        /* Trend chart styling */
-        .trend-chart {
-            position: relative;
-            height: 200px;
-            margin: 24px 0;
-            border-left: 2px solid var(--rule);
-            border-bottom: 2px solid var(--rule);
-        }
-        
-        .trend-line {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-        }
-        
-        .trend-point {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background: var(--accent);
-            border-radius: 50%;
-            transform: translate(-50%, 50%);
-        }
-        
-        .trend-label {
-            position: absolute;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 11px;
-            color: var(--muted);
-        }
-        
         @media (max-width: 600px) {
             h1 {
                 font-size: 36px;
@@ -553,15 +520,15 @@
         </header>
         
         <main>
-            <p class="lead">The honest starting point: we don't know as much as we think we do about how teenagers spend the hours between school and sleep. The data is messy. The sources contradict each other. The numbers that get the most attention may be the least important.</p>
+            <p class="lead">Something is amiss with American teenagers. Not all of them, and not in the same ways, but something. We see it in the mental health data, in teachers' observations, in parents' frustrations, in the teenagers themselves. We call it <em>languishing</em>: not clinically depressed, but living 5 out of 10 day-to-day lives, with heavy scrolling and not much else.</p>
             
-            <p>But we know enough to be worried, and enough to act. This report attempts to be honest about both the uncertainty and the directional truth buried within it.</p>
+            <p>After-school life is complicated and full of variation. The data on how teenagers spend their discretionary hours is imprecise. This report attempts to be honest about both the uncertainty and the directional truth buried within it.</p>
             
             
             <!-- SECTION I: THE DATA PROBLEM -->
             <h2>I. The Data Problem</h2>
             
-            <p>How much time do teenagers spend on screens? It depends who you ask, and what exactly they're measuring.</p>
+            <p>Take, for example, the screen question. How much time do teenagers spend on screens, or on social media, or watching TV? It depends who you ask and what exactly they're measuring. And the averages hide enormous variation between 90th percentile and 10th percentile teenagers.</p>
             
             <div class="problem-box">
                 <h5>Three answers to slightly different questions</h5>
@@ -594,11 +561,11 @@
                 <p style="margin-top: 16px; margin-bottom: 0; font-size: 15px;">These numbers differ by a factor of six. Each measures something slightly different. Yet each is cited authoritatively in policy debates.</p>
             </div>
             
-            <p>The American Time Use Survey (ATUS), conducted by the Bureau of Labor Statistics, is the gold standard for time-use research. It asks people to walk through their previous day minute by minute, recording what they were <em>primarily</em> doing at each moment. This methodology captures focused activity but undercounts multitasking. If you're scrolling your phone while watching TV, only one gets recorded.</p>
+            <p>The American Time Use Survey (ATUS), conducted by the Bureau of Labor Statistics, is the gold standard for time-use research. It asks people to walk through their previous day minute by minute, recording what they were <em>primarily</em> doing at each moment. This methodology captures focused activity but undercounts multitasking.<sup><a href="#fn4">4</a></sup> If you're scrolling your phone while watching TV, only one gets recorded.</p>
             
-            <p>Surveys like Gallup's ask teens to estimate their total time on social media. This likely overcounts, because attention feels like time, and background scrolling gets lumped with focused use.</p>
+            <p>Surveys like Gallup's ask teens to estimate their total time on social media. We suspect this overcounts: attention feels like time, and background scrolling gets lumped with focused use. (Though we haven't found rigorous research confirming this intuition.)</p>
             
-            <p>Neither is "wrong." They're measuring different things. But the gap between them is so vast that any single headline number is essentially useless for policy purposes.</p>
+            <p>Neither approach is wrong. They're measuring different things. But the gap between them makes it hard to use any single headline number for policy purposes.</p>
             
             <div class="key-finding">
                 <div class="key-finding-label">CTF's Working Hypothesis</div>
@@ -613,7 +580,7 @@
             
             <h3>Time with friends: the clearest signal</h3>
             
-            <p>ATUS data shows that Americans aged 15–19 now spend about <span class="inline-stat">one-third</span> of the time socializing with friends compared to twenty years ago: a 45% decline since 2003.<sup><a href="#fn4">4</a></sup></p>
+            <p>ATUS data shows that Americans aged 15–19 now spend about <span class="inline-stat">one-third</span> of the time socializing with friends compared to twenty years ago: a 45% decline since 2003.<sup><a href="#fn5">5</a></sup> In 2024, for the first time in the survey's history, adults over 50 spent slightly more time socializing in person than teenagers did.</p>
             
             <p>The Monitoring the Future survey, which has tracked high school seniors since the 1970s, tells the same story with more texture:</p>
             
@@ -635,17 +602,17 @@
                         <span class="bar-value">44%</span>
                     </div>
                     <div class="bar-row">
-                        <span class="bar-label">2017</span>
+                        <span class="bar-label">2022</span>
                         <div class="bar-container">
-                            <div class="bar primary" style="width: 28%"></div>
+                            <div class="bar primary" style="width: 32%"></div>
                         </div>
-                        <span class="bar-value">28%</span>
+                        <span class="bar-value">32%</span>
                     </div>
                 </div>
-                <p class="chart-source">Source: Monitoring the Future, University of Michigan<sup><a href="#fn5">5</a></sup></p>
+                <p class="chart-source">Source: Monitoring the Future, University of Michigan<sup><a href="#fn6">6</a></sup></p>
             </div>
             
-            <p>The decline was gradual from the 1970s through 2010: about a point every four years. Then it accelerated sharply, dropping 16 points in seven years. By 2017, 12th graders spent a full hour less per day on in-person social interaction than their Gen X predecessors.</p>
+            <p>The decline was gradual from the 1970s through 2010: about a point every four years. Then it accelerated sharply. By 2022, 12th graders spent substantially less time on in-person social interaction than their Gen X predecessors.</p>
             
             <blockquote>
                 "Going to the mall has gone down. Driving in the car for fun has gone down. Going to the movies has gone down. We're talking about kids who are spending five, six, seven hours a day on social media."
@@ -658,13 +625,13 @@
             
             <p>The decline in socializing is the clearest trend, but not the only one:</p>
             
-            <p><strong>Reading:</strong> ATUS shows 15–19 year olds read for pleasure an average of 9 minutes per day. We're not certain how much of that decline reflects substitution toward other media, but pleasure reading by all accounts is down substantially. A University of Florida study found daily reading has declined 40% over twenty years, about 3% annually.<sup><a href="#fn6">6</a></sup> In the late 1970s, 60% of 12th graders read a book or magazine almost daily; by 2016, that figure was 16%. High school teachers report anecdotally, in a growing body of think pieces (most recently in The Atlantic<sup><a href="#fn7">7</a></sup>), that students are having a harder time with sustained attention.</p>
+            <p><strong>Reading:</strong> ATUS shows 15–19 year olds read for pleasure an average of 9 minutes per day. We're not certain how much of that decline reflects substitution toward other media, but pleasure reading by all accounts is down substantially. A University of Florida study found daily reading has declined 40% over twenty years, about 3% annually.<sup><a href="#fn7">7</a></sup> In the late 1970s, 60% of 12th graders read a book or magazine almost daily; by 2016, that figure was 16%. High school teachers report anecdotally, in a growing body of think pieces (most recently in The Atlantic<sup><a href="#fn8">8</a></sup>), that students are having a harder time with sustained attention.</p>
             
-            <p><strong>Sleep:</strong> The CDC Youth Risk Behavior Survey found that only 23% of high school students got the recommended 8+ hours on school nights in 2023, down from 32% in 2013.<sup><a href="#fn8">8</a></sup> Evening phone use is frequently cited as a contributing factor.</p>
+            <p><strong>Sleep:</strong> The CDC Youth Risk Behavior Survey found that only 23% of high school students got the recommended 8+ hours on school nights in 2023, down from 32% in 2013.<sup><a href="#fn9">9</a></sup> Evening phone use is frequently cited as a contributing factor.</p>
             
-            <p><strong>Part-time work:</strong> Teen labor force participation has declined from 52% in 2000 to 37% today. Some of this reflects economic shifts, but the steepest drops came after 2010.<sup><a href="#fn9">9</a></sup></p>
+            <p><strong>Part-time work:</strong> Teen labor force participation has declined from 52% in 2000 to 37% today. Some of this reflects economic shifts, but the steepest drops came after 2010.<sup><a href="#fn10">10</a></sup></p>
             
-            <p><strong>Sports participation (boys):</strong> While overall youth sports rebounded post-pandemic, regular participation among boys fell from 50% in 2013 to 41% in 2023. Teen (13–17) regular participation dropped 3% even in 2024.<sup><a href="#fn10">10</a></sup></p>
+            <p><strong>Sports participation (boys):</strong> While overall youth sports rebounded post-pandemic, regular participation among boys fell from 50% in 2013 to 41% in 2023. Teen (13–17) regular participation dropped 3% even in 2024.<sup><a href="#fn11">11</a></sup></p>
             
             <div class="emphasis-box">
                 <p><strong>The directional truth:</strong> Regardless of the exact screen time number, teenagers are spending substantially less time with friends in person, less time reading, less time sleeping, less time working, and (for boys) less time in sports than they did fifteen years ago. These are the activities being displaced. This is what we should be measuring.</p>
@@ -690,7 +657,7 @@
             
             <h3>The labor market case</h3>
             
-            <p>Economists have documented a dramatic shift in what the labor market rewards. Research from Harvard's David Deming shows that since 1980, jobs requiring high levels of social skills have grown substantially, while jobs requiring only cognitive skills have shrunk.<sup><a href="#fn11">11</a></sup></p>
+            <p>Economists have documented a dramatic shift in what the labor market rewards. Research from Harvard's David Deming shows that since 1980, jobs requiring high levels of social skills have grown substantially, while jobs requiring only cognitive skills have shrunk.<sup><a href="#fn12">12</a></sup></p>
             
             <div class="chart-container">
                 <div class="chart-title">Change in U.S. Job Share by Skill Type, 1980–2012</div>
@@ -720,7 +687,7 @@
                 <p class="chart-source">Source: Deming, "The Growing Importance of Social Skills in the Labor Market," QJE 2017</p>
             </div>
             
-            <p>The Hamilton Project reports that labor market returns to "non-cognitive skills" (teamwork, communication, adaptability, persistence) have nearly doubled since 1979. The premium for having <em>both</em> cognitive and non-cognitive skills has increased by about 6 percentage points per decade.<sup><a href="#fn12">12</a></sup></p>
+            <p>The Hamilton Project reports that labor market returns to "non-cognitive skills" (teamwork, communication, adaptability, persistence) have nearly doubled since 1979. The premium for having <em>both</em> cognitive and non-cognitive skills has increased by about 6 percentage points per decade.<sup><a href="#fn13">13</a></sup></p>
             
             <div class="chart-container">
                 <div class="chart-title">Returns to Non-Cognitive Skills Over Time</div>
@@ -756,13 +723,13 @@
             
             <p>Clinical psychology offers a third line of evidence. Behavioral Activation (BA) is one of the most effective evidence-based treatments for depression. The core premise: increased engagement in meaningful activities leads to improved mood.</p>
             
-            <p>A 2023 meta-analysis of 22 randomized controlled trials found that individual behavioral activation produced effect sizes of g = 0.85 for depression, comparable to cognitive therapy and antidepressant medication.<sup><a href="#fn13">13</a></sup> The intervention is "relatively uncomplicated, time-efficient and does not require complex skills from patients or therapists."</p>
+            <p>A 2023 meta-analysis of 22 randomized controlled trials found that individual behavioral activation produced effect sizes of g = 0.85 for depression, comparable to cognitive therapy and antidepressant medication.<sup><a href="#fn14">14</a></sup> The intervention is "relatively uncomplicated, time-efficient and does not require complex skills from patients or therapists."</p>
             
             <p>Related approaches in positive psychology emphasize a similar insight, sometimes summarized as "do more, feel better." The inverse is also true: decreased activity leads to worse mood, which leads to further withdrawal, creating a vicious cycle. This is precisely the pattern we see in languishing teenagers: not clinically depressed, but inactive, and the inactivity breeds low-grade malaise.</p>
             
             <h3>Independence Therapy</h3>
             
-            <p>Camilo Ortiz, a clinical psychologist at Long Island University, has developed a related approach called "Independence Therapy." Working with clinically anxious children aged 9–14, he found that giving them "mega-doses of independence" (assignments to do new things on their own, without parents) reduced anxiety as effectively as traditional exposure therapy.<sup><a href="#fn14">14</a></sup></p>
+            <p>Camilo Ortiz, a clinical psychologist at Long Island University, has developed a related approach called "Independence Therapy." Working with clinically anxious children aged 9–14, he found that giving them "mega-doses of independence" (assignments to do new things on their own, without parents) reduced anxiety as effectively as traditional exposure therapy.<sup><a href="#fn15">15</a></sup></p>
             
             <p>As Ortiz explains: "When we do everything for them, we subtract all the uncertainty and then they suck at it. And then they're so anxious because you put them in any situation that has an element of uncertainty and they fall apart."</p>
             
@@ -783,13 +750,7 @@
             
             <h3>Why suppression alone may not be enough</h3>
             
-            <p>Efforts to restrict teen screen use have shown limited success outside of school:</p>
-            
-            <p><strong>China</strong> has tried since 2019 with various restrictions, including video game time limits. A <em>Nature Human Behaviour</em> study found "no credible evidence" the tactics reduced gaming.<sup><a href="#fn15">15</a></sup></p>
-            
-            <p><strong>Britain's</strong> Online Safety Act took effect in July 2025. VPN signups surged by 1,400% within hours, according to Proton VPN, and VPN traffic increased nearly 2,000% in the following days.<sup><a href="#fn16">16</a></sup></p>
-            
-            <p><strong>Parental controls</strong> (screen time limits, content filters) are widely available but rarely effective. The dynamic of a parent peering over a teenager's shoulder asking "Is that really homework?" is difficult to sustain.</p>
+            <p>Efforts to restrict teen screen use have shown limited success outside of school. China has tried since 2019 with various restrictions, including video game time limits; a <em>Nature Human Behaviour</em> study found "no credible evidence" the tactics reduced gaming.<sup><a href="#fn16">16</a></sup> Britain's Online Safety Act took effect in July 2025; VPN signups surged by 1,400% within hours.<sup><a href="#fn17">17</a></sup> Parental controls (screen time limits, content filters) are widely available but rarely effective. The dynamic of a parent peering over a teenager's shoulder asking "Is that really homework?" is difficult to sustain.</p>
             
             <p>School phone bans during the 8am–3pm hours have strong logic and growing evidence behind them. But from 3pm to 3am, when teens have more autonomy and parents have less control, suppression faces structural limits.</p>
             
@@ -797,14 +758,17 @@
             
             <p>There's a deeper reason suppression alone may be insufficient. Once upon a time, boredom nudged teenagers to do things. The discomfort of having nothing to do propelled them into the world: to call a friend, ride a bike, get a job, find trouble, discover something.</p>
             
-            <p>Smartphones have largely eliminated that discomfort. No teenager ever has to sit with boredom for more than a few seconds. This removes the nudge mechanism that once pushed young people toward real-world activity.</p>
+            <p>Teenagers with screens have largely eliminated that discomfort. They never have to sit with boredom for more than a few seconds. This removes the nudge mechanism that once pushed young people toward real-world activity.</p>
             
             <div class="key-finding">
-                <div class="key-finding-label">Core Insight</div>
                 <p>Substitution works inherently. If you're at soccer practice, you're off your phone. If you're working a restaurant shift, you're engaged with real people. The goal is to make real life more compelling, so that it crowds out passive screen time naturally.</p>
             </div>
             
-            <h3>What flourishing looks like</h3>
+            <h3>Towards a vision of flourishing</h3>
+            
+            <p>Flourishing is a more holistic concept than happiness. Researchers like Corey Keyes, Tyler VanderWeele at Harvard, and Carol Ryff have done important work conceptualizing what it means.<sup><a href="#fn18">18</a></sup> The field is still working out precise definitions. But flourishing means something deeper than momentary contentment: it combines hedonic wellbeing (feeling good) with eudaimonic wellbeing (functioning well, having purpose, being engaged).</p>
+            
+            <p>We find a gap between the academic definitions of flourishing and what we observe in real time. The academic measures capture a <em>state</em>. What we see are the <em>activities</em> that appear to lead to that state: the hypothesized drivers. Our working theory is that engaging more deeply in how you spend your time, and trying to align it toward activities that build a flourishing life, produces better outcomes. Both the feeling good and the functioning well, together.</p>
             
             <p>Flourishing teenagers share a common pattern: busy calendars. Their out-of-school hours are filled with a portfolio of activities across multiple domains:</p>
             
@@ -854,7 +818,7 @@
                     </tr>
                     <tr>
                         <td>Time with friends (in person)</td>
-                        <td>ATUS only</td>
+                        <td>ATUS, MTF</td>
                         <td>Declining, per diary data</td>
                     </tr>
                     <tr>
@@ -892,9 +856,9 @@
             
             <p>What gets measured reflects what we're anxious about, not necessarily what matters. We need time-use instruments designed to capture flourishing activities with the same rigor we bring to screen time.</p>
             
-            <h3>2. An "hours of flourishing" framework</h3>
+            <h3>2. An "hours toward flourishing" framework</h3>
             
-            <p>Instead of measuring harm, we should measure the positive. We propose developing a framework for tracking <strong>hours of flourishing per week</strong>: time spent on activities the research suggests actually build wellbeing and capability.</p>
+            <p>Instead of measuring harm, we should measure the positive. We propose developing a framework for tracking <strong>hours that could lead to a state of flourishing</strong> per week: time spent on activities the research suggests actually build wellbeing and capability.</p>
             
             <p>A working definition might include:</p>
             <ul style="margin: 20px 0 20px 24px;">
@@ -906,7 +870,7 @@
                 <li>Creative activity, outdoor time, community participation</li>
             </ul>
             
-            <p>We acknowledge this is extremely messy. What counts as "flourishing" involves value judgments. The boundaries are fuzzy. The measurement challenges are real. But we think the work of figuring it out is worth doing. Without a positive metric, we're stuck measuring what we're against rather than what we're for.</p>
+            <p>We acknowledge this is extremely messy. What counts as "flourishing" involves value judgments, and the boundaries between categories are often fuzzy. The measurement challenges are real, and reasonable people will disagree about what belongs on the list. But we think the work of figuring it out is worth doing, because without a positive metric, we're stuck measuring what we're against rather than what we're for.</p>
             
             <h3>3. Understanding the economics of substitution</h3>
             
@@ -917,19 +881,18 @@
             <p>But we don't have rigorous field experiments that actually substitute activities for screen time and measure the results. We need R&D on:</p>
             
             <ul style="margin: 20px 0 20px 24px;">
-                <li>Which activities produce the largest wellbeing and developmental gains?</li>
-                <li>How do you motivate languishing teens who aren't bored, because screens have eliminated boredom?</li>
+                <li>Which activities produce <em>any</em> wellbeing and developmental gains?</li>
                 <li>What's the dose-response relationship between flourishing activities and outcomes?</li>
                 <li>Do the benefits vary by demographic group, family structure, or baseline characteristics?</li>
             </ul>
             
-            <p>We know what a flourishing teen's calendar looks like. We don't know enough about how to help languishing teens build one.</p>
+            <p>We hypothesize we know what a flourishing teen's calendar looks like. We don't know enough about how to help languishing teens build one.</p>
             
             
             <!-- SECTION VI: CONCLUSION -->
             <h2>VI. From Languishing to Flourishing</h2>
             
-            <p>A suburban Boston-area teacher recently described his median student:</p>
+            <p>A suburban Boston-area teacher recently described what he called his median student:</p>
             
             <div class="portrait-box">
                 <h5>Portrait of the Languishing Teen</h5>
@@ -945,7 +908,7 @@
             
             <p>This portrait, recognizable to teachers, parents, and teenagers themselves, captures something that doesn't fit neatly into clinical categories. These kids aren't depressed enough for diagnosis. They're not in crisis. They're just... languishing.</p>
             
-            <p>As Yuval Levin wrote: "The challenges to America's social order now seem less like exorbitant human desires driving people's lives out of control and more like an absence of energy and drive leaving people languishing and enervated."<sup><a href="#fn17">17</a></sup></p>
+            <p>As Yuval Levin wrote: "The challenges to America's social order now seem less like exorbitant human desires driving people's lives out of control and more like an absence of energy and drive leaving people languishing and enervated."<sup><a href="#fn19">19</a></sup></p>
             
             <p>The screen time debate has been dominated by questions of harm. But harm may be the wrong frame. The question isn't whether phones are bad for teenagers. The question is whether the life that remains after phones take their share is good enough to produce flourishing.</p>
             
@@ -961,20 +924,22 @@
                     <li id="fn1">Bureau of Labor Statistics, American Time Use Survey 2024, Table 11A. "Individuals ages 15 to 19 spent 1.3 hours playing games or using a computer for leisure on an average day." <a href="https://www.bls.gov/news.release/atus.t11a.htm">bls.gov/news.release/atus.t11a.htm</a></li>
                     <li id="fn2">Gallup, "Teens Spend Average of 4.8 Hours on Social Media Per Day," October 2023.</li>
                     <li id="fn3">Common Sense Media, "The Common Sense Census: Media Use by Tweens and Teens," 2021.</li>
-                    <li id="fn4">Derek Thompson, "Why Americans Stopped Hanging Out," The Atlantic, February 2024, citing ATUS data showing 45% decline for teenagers aged 15–19 from 2003–2022.</li>
-                    <li id="fn5">Monitoring the Future survey data, cited in Jean Twenge, <em>iGen</em> (2017) and subsequent publications.</li>
-                    <li id="fn6">Bone et al., "The decline in reading for pleasure in the US: Analyses of 20 years of the American Time Use Survey," iScience, August 2025.</li>
-                    <li id="fn7">Idrees Kahloon, "America Is Sliding Toward Illiteracy," The Atlantic, 2024. See also the broader genre of teacher accounts of attention difficulties.</li>
-                    <li id="fn8">CDC Youth Risk Behavior Survey Data Summary & Trends Report: 2013–2023. Sleep at 8+ hours declined from 32% (2013) to 23% (2023).</li>
-                    <li id="fn9">Bureau of Labor Statistics, teen labor force participation rates, 2000–2024.</li>
-                    <li id="fn10">Aspen Institute Project Play, "State of Play 2025."</li>
-                    <li id="fn11">David Deming, "The Growing Importance of Social Skills in the Labor Market," Quarterly Journal of Economics, November 2017.</li>
-                    <li id="fn12">The Hamilton Project, "Seven Facts on Noncognitive Skills," citing Deming (2015) and Weinberger (2014).</li>
-                    <li id="fn13">Cuijpers et al., "Individual behavioral activation in the treatment of depression: A meta analysis," Psychotherapy Research, April 2023. Effect size g = 0.85 for individual BA vs. control conditions.</li>
-                    <li id="fn14">Camilo Ortiz and Matthew Fastman, "Independence Therapy," Journal of Anxiety Disorders, 2024. Also: Jonathan Haidt, "Treating Childhood Anxiety with a Mega-Dose of Independence," After Babel, July 2024.</li>
-                    <li id="fn15">Zendle et al., "No evidence that Chinese playtime mandates reduced heavy gaming," Nature Human Behaviour, 2024.</li>
-                    <li id="fn16">Top10VPN, traffic monitoring data, July 2025. ProtonVPN reported 1,400% surge in UK signups within hours of Online Safety Act enforcement.</li>
-                    <li id="fn17">Yuval Levin, "The Changing Face of Social Breakdown," National Affairs, Fall 2024.</li>
+                    <li id="fn4">The BLS notes that ATUS records only the "primary activity" at each moment. For more on methodological limitations, see Hofferth, S. L. (2010), "Home media and children's achievement and behavior," Child Development, 81(5), 1598-1619.</li>
+                    <li id="fn5">Derek Thompson, "Why Americans Stopped Hanging Out," The Atlantic, February 2024, citing ATUS data showing 45% decline for teenagers aged 15–19 from 2003–2022. See also Jean Twenge, "It's not just you: Americans are still not hanging out," Generation Tech Blog, September 2025.</li>
+                    <li id="fn6">Monitoring the Future survey data. 2022 data from "Teens are spending less time than ever with friends," The Hill, June 2023.</li>
+                    <li id="fn7">Bone et al., "The decline in reading for pleasure in the US: Analyses of 20 years of the American Time Use Survey," iScience, August 2025.</li>
+                    <li id="fn8">Idrees Kahloon, "America Is Sliding Toward Illiteracy," The Atlantic, 2024. See also the broader genre of teacher accounts of attention difficulties.</li>
+                    <li id="fn9">CDC Youth Risk Behavior Survey Data Summary & Trends Report: 2013–2023. Sleep at 8+ hours declined from 32% (2013) to 23% (2023).</li>
+                    <li id="fn10">Bureau of Labor Statistics, teen labor force participation rates, 2000–2024.</li>
+                    <li id="fn11">Aspen Institute Project Play, "State of Play 2025."</li>
+                    <li id="fn12">David Deming, "The Growing Importance of Social Skills in the Labor Market," Quarterly Journal of Economics, November 2017.</li>
+                    <li id="fn13">The Hamilton Project, "Seven Facts on Noncognitive Skills," citing Deming (2015) and Weinberger (2014).</li>
+                    <li id="fn14">Cuijpers et al., "Individual behavioral activation in the treatment of depression: A meta analysis," Psychotherapy Research, April 2023. Effect size g = 0.85 for individual BA vs. control conditions.</li>
+                    <li id="fn15">Camilo Ortiz and Matthew Fastman, "Independence Therapy," Journal of Anxiety Disorders, 2024. Also: Jonathan Haidt, "Treating Childhood Anxiety with a Mega-Dose of Independence," After Babel, July 2024.</li>
+                    <li id="fn16">Zendle et al., "No evidence that Chinese playtime mandates reduced heavy gaming," Nature Human Behaviour, 2024.</li>
+                    <li id="fn17">Top10VPN, traffic monitoring data, July 2025. ProtonVPN reported 1,400% surge in UK signups within hours of Online Safety Act enforcement.</li>
+                    <li id="fn18">Corey Keyes, "The mental health continuum: from languishing to flourishing in life," Journal of Health and Social Behavior, 2002. Tyler VanderWeele, "On the promotion of human flourishing," PNAS, 2017. Carol Ryff, "Happiness is everything, or is it? Explorations on the meaning of psychological well-being," Journal of Personality and Social Psychology, 1989.</li>
+                    <li id="fn19">Yuval Levin, "The Changing Face of Social Breakdown," National Affairs, Fall 2024.</li>
                 </ol>
                 
                 <h4 style="margin-top: 32px;">Additional Sources</h4>
